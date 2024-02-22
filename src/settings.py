@@ -8,7 +8,7 @@ CONFIG = {
     'db':{
         'info': {
             'name': os.getenv('DB_NAME'),
-            'url': os.getenv('DB_USERNAME'), 
+            'url': os.getenv('DB_URL'), 
         },
         'user': {
             'username': os.getenv('DB_USERNAME'),
