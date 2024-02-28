@@ -20,10 +20,6 @@ load_dotenv()
 async def main():
     # apply_models()
     set_allowed_users_to_settings()
-    # print(settings.ALLOWED_USERS)
-
-    set_allowed_users_to_settings()
-    print(settings.ALLOWED_USERS)
 
     await dp.start_polling(bot)
 
