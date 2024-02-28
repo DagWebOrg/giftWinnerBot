@@ -17,10 +17,13 @@ dp = Dispatcher()
 dp.include_router(account_routes.router)
 
 
-@dp.error(ExceptionTypeFilter(AuthError, ValueError), F.update.message.as_("message") )
+@dp.error(ExceptionTypeFilter(AuthError, ValueError),
+          F.update.message.as_("message"))
+
 async def error_handler(event: ErrorEvent, message: Message, state: FSMContext):
-    if not isinstance(event, ValueError):
+    if isinstance(event, AuthError):
         await state.set_state(AccountState.password_entry)
+    
     await message.answer(text=str(event.exception))
 
    

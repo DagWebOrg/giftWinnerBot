@@ -1,6 +1,7 @@
 import os
-import asyncio
 import logging
+
+import asyncio
 
 from aiogram import Bot, Dispatcher
 from aiogram.filters.command import Command
@@ -14,7 +15,6 @@ import settings
 
 # apply_models()
 
-load_dotenv()
 # logging.basicConfig(level=logging.INFO)
 
 async def main():
@@ -23,5 +23,7 @@ async def main():
 
     await dp.start_polling(bot)
 
+
 if __name__ == "__main__":
     asyncio.run(main())
+

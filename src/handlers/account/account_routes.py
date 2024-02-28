@@ -10,10 +10,9 @@ import settings
 from database.crud import CRUD
 
 
-
 router = Router(name=__name__)
 
-# Хэндлер на команду /start
+
 @router.message(Command("start"))
 async def cmd_start(message: types.Message, state: FSMContext):
     if not is_authenticated(message):
@@ -38,6 +37,4 @@ async def authenticate_user(message: types.Message, state: FSMContext):
 @router.message()
 async def message_handler(message: types.Message):
     is_authenticated(message)
-   
-
-        
+           

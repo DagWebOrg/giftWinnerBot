@@ -13,8 +13,9 @@ def is_authenticated(message: types.Message):
         raise AuthError()
     return True
 
+
 def set_allowed_users_to_settings():
-    users = CRUD.get_users()
-    settings.ALLOWED_USERS = users    
+    settings.ALLOWED_USERS = CRUD.get_users()
+        
     
     

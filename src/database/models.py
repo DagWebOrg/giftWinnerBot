@@ -1,5 +1,6 @@
 from typing import List
 from typing import Optional
+
 from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.orm import Mapped
 from sqlalchemy.orm import mapped_column
@@ -7,8 +8,10 @@ from sqlalchemy import String, ForeignKey
 
 from .tools import DatabaseManager 
 
+
 class Base(DeclarativeBase):
     pass
+
 
 class ObservedAccount(Base):
     __tablename__ = "observed_account"
@@ -20,7 +23,8 @@ class ObservedAccount(Base):
 
     # def __repr__(self) -> str:
     #     return f"{self.name}"
-    
+
+
 class BotUser(Base):
     __tablename__ = "bot_user"
     __table_args__ = {'extend_existing': True}
@@ -33,3 +37,4 @@ class BotUser(Base):
 
 def apply_models():
     Base.metadata.create_all(DatabaseManager().engine)
+

@@ -1,13 +1,14 @@
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.sql import text
-from .models import ObservedAccount
 
+from .models import ObservedAccount
 from .tools import DatabaseManager
 from settings import ALLOWED_USERS
 from .models import BotUser
 
 
 class CRUD():
+    
     @staticmethod
     def loginfo():
         with DatabaseManager() as session:

@@ -13,7 +13,6 @@ class DatabaseManager:
         self.db_username = settings.CONFIG['db']['user']['username']
         self.db_password = settings.CONFIG['db']['user']['password']
 
-
         self.engine = create_engine(f"postgresql+psycopg2://{self.db_username}:{self.db_password}@{self.db_url}/{self.db_name}")
         self.Session = sessionmaker(bind=self.engine)
 
@@ -27,3 +26,4 @@ class DatabaseManager:
         else:
             self.session.commit()
         self.session.close()
+
