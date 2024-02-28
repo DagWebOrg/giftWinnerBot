@@ -1,3 +1,4 @@
 /venv
 /.env
-/Makefile
+Makefile
+__pycache__/

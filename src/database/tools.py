@@ -3,18 +3,18 @@ import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from settings import CONFIG
+import settings
 
 
 class DatabaseManager:
     def __init__(self):
-        self.db_name = CONFIG['db']['info']['name']
-        self.db_url = CONFIG['db']['info']['url']
-        self.db_username = CONFIG['db']['user']['username']
-        self.db_password = CONFIG['db']['user']['password']
+        self.db_name = settings.CONFIG['db']['info']['name']
+        self.db_url = settings.CONFIG['db']['info']['url']
+        self.db_username = settings.CONFIG['db']['user']['username']
+        self.db_password = settings.CONFIG['db']['user']['password']
 
 
-        self.engine = create_engine(f"postgresql+psycopg2://{self.db_username}:{self.db_password}@{self.db_url}/{self.db_name}", echo=True)
+        self.engine = create_engine(f"postgresql+psycopg2://{self.db_username}:{self.db_password}@{self.db_url}/{self.db_name}")
         self.Session = sessionmaker(bind=self.engine)
 
     def __enter__(self):
