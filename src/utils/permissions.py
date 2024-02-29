@@ -5,11 +5,12 @@ import settings
 from utils.exceptions import AuthError
 
 from database.crud import CRUD
-from states.account import AccountState
+from states.authorization import AuthorizationState
 
 
 def is_authenticated(message: types.Message):
     if int(message.from_user.id) not in settings.ALLOWED_USERS:
+        print(int(message.from_user.id), '---', settings.ALLOWED_USERS)
         raise AuthError()
     return True
 
