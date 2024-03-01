@@ -13,3 +13,10 @@ class KeyboardStorage():
         ],[
             KeyboardButton(text='Новые сообщения 📩'),
         ]])
+    def work_accounts_list():
+        return ReplyKeyboardMarkup(keyboard=[[
+            KeyboardButton(text='Добавить новый аккаунт ✍🏻'),
+            KeyboardButton(text='Удалить аккаунт ❌'),
+        ],[
+            KeyboardButton(text='Вернуться на главную 🏚'),
+        ]])

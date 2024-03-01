@@ -1,4 +1,4 @@
-from aiogram import Router, types
+from aiogram import Router, types, F
 from aiogram.fsm.context import FSMContext
 
 from states.keyboard import KeyboardState
@@ -8,6 +8,12 @@ from utils.keyboards import KeyboardStorage as kb
 
 router = Router(name=__name__)
 
+@router.message(F.text.lower() == "вернуться на главную 🏚")
+async def back_to_home(message: types.Message, state: FSMContext):
+    keyboard = kb.initial()
+    await state.set_state(KeyboardState.initial)
+    await message.answer("Главная страница: ", reply_markup=keyboard)
+
 
 @router.message()
 async def message_handler(message: types.Message, state: FSMContext):
@@ -15,4 +21,4 @@ async def message_handler(message: types.Message, state: FSMContext):
     if await state.get_state() is None:
         keyboard = kb.initial()
         await state.set_state(KeyboardState.initial)
-        await message.answer(text='Синхронизировал клавиатуру для тебя.', reply_markup=keyboard)
+        await message.answer(text='Бот был перезапущен. Вы очутились на главной странице...', reply_markup=keyboard)

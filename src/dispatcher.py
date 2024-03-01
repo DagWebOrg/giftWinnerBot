@@ -5,18 +5,22 @@ from aiogram.types import ErrorEvent, Message, ReplyKeyboardRemove
 from aiogram.filters import ExceptionTypeFilter
 from aiogram.fsm.context import FSMContext
 
+from utils.exceptions import AuthError
+from states.authorization import AuthorizationState
 
 from handlers.main import main_routes
 from handlers.authorization import authorization_routes
-from utils.exceptions import AuthError
-from states.authorization import AuthorizationState
+from handlers.work_account import work_account_routes
+
 
 token = os.getenv('BOT_TOKEN')
 bot = Bot(token=token)
 dp = Dispatcher()
 
 dp.include_router(authorization_routes.router)
+dp.include_router(work_account_routes.router)
 dp.include_router(main_routes.router)
+
 
 
 
