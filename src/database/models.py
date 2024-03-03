@@ -18,7 +18,7 @@ class ObservedAccount(Base):
     __table_args__ = {'extend_existing': True}
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    name: Mapped[str] = mapped_column(String(30))
+    name: Mapped[str] = mapped_column(String(30), unique=True)
     fullname: Mapped[Optional[str]]
 
     # def __repr__(self) -> str:
@@ -30,8 +30,8 @@ class WorkAccount(Base):
     __table_args__ = {'extend_existing': True}
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    alias: Mapped[str] = mapped_column(String(100))
-    access_token: Mapped[str] = mapped_column(String(255))
+    alias: Mapped[str] = mapped_column(String(100), unique=True)
+    access_token: Mapped[str] = mapped_column(String(255), unique=True)
 
     # def __repr__(self) -> str:
     #     return f"{self.alias}"

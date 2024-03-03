@@ -1,10 +1,6 @@
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy.sql import text
-
-from .models import ObservedAccount
+from .models import ObservedAccount, BotUser, WorkAccount
 from .tools import DatabaseManager
-from settings import ALLOWED_USERS
-from .models import BotUser, WorkAccount
+from utils.exceptions import AccountAddingError
 
 
 class CRUD():
@@ -24,7 +20,7 @@ class CRUD():
                 users = [item.id for item in users]
                 return users
             except Exception as e:
-                raise ValueError(f'Ошибка БД.\n{e}')
+                raise ValueError(f'Ошибка БД при получении списка пользователей, которым разрешено пользоваться ботом.\n{e}')
     
     @staticmethod
     def create_user(id):
@@ -34,7 +30,7 @@ class CRUD():
                 session.add(new_bot_user)
                 session.commit()
             except Exception as e:
-                raise ValueError(f'Ошибка БД.\n{e}')
+                raise ValueError(f'Ошибка БД при пользователя бота в список разрешенных.\n\n{e}')
             
     
     @staticmethod
@@ -48,7 +44,7 @@ class CRUD():
                                   for item in work_accounts]
                 return work_accounts
             except Exception as e:
-                raise ValueError(f'Ошибка БД.\n{e}')
+                raise ValueError(f'Ошибка БД при получении списка аккаунтов.\n\n\n{e}')
 
 
     @staticmethod
@@ -62,7 +58,7 @@ class CRUD():
                 session.add(new_work_account)
                 session.commit()
             except Exception as e:
-                raise ValueError(f'Ошибка БД.\n{e}')
+                raise AccountAddingError(f'Ошибка БД при добавлении нового аккаунта.\nВозможно такой аккаунт уже существует.\n\n{e}')
             
     
     @staticmethod
@@ -73,4 +69,4 @@ class CRUD():
                 session.delete(work_account)
                 session.commit()
             except Exception as e:
-                raise ValueError(f'Ошибка БД.\n{e}')
+                raise ValueError(f'Ошибка БД при удалении аккаунта.\n\n{e}')
