@@ -18,7 +18,7 @@ import settings
 # logging.basicConfig(level=logging.INFO)
 
 async def main():
-    # apply_models()
+    apply_models()
     set_allowed_users_to_settings()
 
     await dp.start_polling(bot)

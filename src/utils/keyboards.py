@@ -20,3 +20,7 @@ class KeyboardStorage():
         ],[
             KeyboardButton(text='Вернуться на главную 🏚'),
         ]])
+    def kb_for_return():
+        return ReplyKeyboardMarkup(keyboard=[[
+            KeyboardButton(text='Вернуться на главную 🏚'),
+        ]])

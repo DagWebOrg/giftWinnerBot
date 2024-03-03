@@ -30,11 +30,11 @@ class WorkAccount(Base):
     __table_args__ = {'extend_existing': True}
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    authorization_alias: Mapped[str] = mapped_column(String(100))
+    alias: Mapped[str] = mapped_column(String(100))
     access_token: Mapped[str] = mapped_column(String(255))
 
     # def __repr__(self) -> str:
-    #     return f"{self.authorization_alias}"
+    #     return f"{self.alias}"
 
 
 class BotUser(Base):
