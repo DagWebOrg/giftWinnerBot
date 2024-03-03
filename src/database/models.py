@@ -1,4 +1,3 @@
-from typing import List
 from typing import Optional
 
 from sqlalchemy.orm import DeclarativeBase

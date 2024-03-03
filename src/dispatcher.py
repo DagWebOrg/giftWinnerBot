@@ -14,17 +14,17 @@ from utils.keyboards import KeyboardStorage
 from handlers.main import main_routes
 from handlers.authorization import authorization_routes
 from handlers.work_account import work_account_routes
+from handlers.other import other_routes
 
 
 token = os.getenv('BOT_TOKEN')
 bot = Bot(token=token)
 dp = Dispatcher()
 
+dp.include_router(main_routes.router)
 dp.include_router(authorization_routes.router)
 dp.include_router(work_account_routes.router)
-dp.include_router(main_routes.router)
-
-
+dp.include_router(other_routes.router)
 
 
 @dp.error(ExceptionTypeFilter(AuthError, AccountAddingError, ValueError),
