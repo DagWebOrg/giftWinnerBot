@@ -7,7 +7,7 @@ class KeyboardStorage():
     def initial():
         return ReplyKeyboardMarkup(keyboard=[[
             KeyboardButton(text='Список рабочих аккаунтов 📝'),
-            KeyboardButton(text='Список наблюдаемых аккаунтов 👁'),
+            KeyboardButton(text='Список отслеживаемых аккаунтов 👁'),
         ],[
             KeyboardButton(text='Информация о розыгрышах 🛍'),
         ],[
@@ -17,6 +17,13 @@ class KeyboardStorage():
         return ReplyKeyboardMarkup(keyboard=[[
             KeyboardButton(text='Добавить новый аккаунт ✍🏻'),
             KeyboardButton(text='Удалить аккаунт ❌'),
+        ],[
+            KeyboardButton(text='Вернуться на главную 🏚'),
+        ]])
+    def tracking_accounts_list():
+        return ReplyKeyboardMarkup(keyboard=[[
+            KeyboardButton(text='Добавить новый аккаунт 🖌'),
+            KeyboardButton(text='Удалить аккаунт 🚫'),
         ],[
             KeyboardButton(text='Вернуться на главную 🏚'),
         ]])

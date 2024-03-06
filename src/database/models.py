@@ -3,7 +3,8 @@ from typing import Optional
 from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.orm import Mapped
 from sqlalchemy.orm import mapped_column
-from sqlalchemy import String, ForeignKey
+from sqlalchemy import String, ForeignKey, DateTime
+import datetime
 
 from .tools import DatabaseManager 
 
@@ -12,13 +13,13 @@ class Base(DeclarativeBase):
     pass
 
 
-class ObservedAccount(Base):
-    __tablename__ = "observed_account"
+class TrackingAccount(Base):
+    __tablename__ = "tracking_account"
     __table_args__ = {'extend_existing': True}
 
-    id: Mapped[int] = mapped_column(primary_key=True)
-    name: Mapped[str] = mapped_column(String(30), unique=True)
-    fullname: Mapped[Optional[str]]
+    account_id: Mapped[str] = mapped_column(primary_key=True)
+    alias: Mapped[str] = mapped_column(String(100), unique=True)
+    last_scan_data: Mapped[DateTime] = mapped_column(DateTime(timezone=True), default=datetime.datetime.utcnow)
 
     # def __repr__(self) -> str:
     #     return f"{self.name}"

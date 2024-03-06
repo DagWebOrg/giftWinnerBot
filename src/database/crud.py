@@ -1,4 +1,4 @@
-from .models import ObservedAccount, BotUser, WorkAccount
+from .models import BotUser, TrackingAccount, WorkAccount
 from .tools import DatabaseManager
 from utils.exceptions import AccountAddingError
 
@@ -8,7 +8,7 @@ class CRUD():
     @staticmethod
     def loginfo():
         with DatabaseManager() as session:
-            result = session.query(ObservedAccount)
+            result = session.query(TrackingAccount)
             print(result)
     
     @staticmethod
@@ -67,6 +67,46 @@ class CRUD():
             try:
                 work_account = session.query(WorkAccount).filter(WorkAccount.alias == alias).one()
                 session.delete(work_account)
+                session.commit()
+            except Exception as e:
+                raise ValueError(f'Ошибка БД при удалении аккаунта.\n\n{e}')
+
+
+    @staticmethod
+    def get_tracking_accounts():
+        with DatabaseManager() as session:
+            try:
+                tracking_accounts = session.query(TrackingAccount).all()
+                session.expunge_all()
+                work_accounts = [{'account_id': item.account_id,
+                                'alias': item.alias,
+                                'last_scan_data': item.last_scan_data}
+                                  for item in tracking_accounts]
+                return work_accounts
+            except Exception as e:
+                raise ValueError(f'Ошибка БД при получении списка аккаунтов.\n\n\n{e}')
+
+
+    @staticmethod
+    def create_tracking_account(account_id: str, alias: str):
+        with DatabaseManager() as session:
+            try:
+                new_tracking_account = TrackingAccount(
+                    account_id = account_id,
+                    alias = alias,
+                )
+                session.add(new_tracking_account)
+                session.commit()
+            except Exception as e:
+                raise AccountAddingError(f'Ошибка БД при добавлении нового аккаунта.\nВозможно такой аккаунт уже существует.\n\n{e}')
+            
+
+    @staticmethod
+    def delete_tracking_account(alias: str):
+        with DatabaseManager() as session:
+            try:
+                tracking_account = session.query(TrackingAccount).filter(TrackingAccount.alias == alias).one()
+                session.delete(tracking_account)
                 session.commit()
             except Exception as e:
                 raise ValueError(f'Ошибка БД при удалении аккаунта.\n\n{e}')

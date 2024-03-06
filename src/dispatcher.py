@@ -14,6 +14,7 @@ from utils.keyboards import KeyboardStorage
 from handlers.main import main_routes
 from handlers.authorization import authorization_routes
 from handlers.work_account import work_account_routes
+from handlers.tracking_account import tracking_account_routes
 from handlers.other import other_routes
 
 
@@ -24,6 +25,7 @@ dp = Dispatcher()
 dp.include_router(main_routes.router)
 dp.include_router(authorization_routes.router)
 dp.include_router(work_account_routes.router)
+dp.include_router(tracking_account_routes.router)
 dp.include_router(other_routes.router)
 
 
@@ -36,8 +38,8 @@ async def error_handler(event: ErrorEvent, message: Message, state: FSMContext):
         await state.set_state(AuthorizationState.password_entry)
     
     if isinstance(event.exception, AccountAddingError):
-        await state.set_state(KeyboardState.monitored_accounts_list)
-        keyboard = KeyboardStorage.work_accounts_list()
+        await state.set_state(KeyboardState.initial)
+        keyboard = KeyboardStorage.initial()
 
     await message.answer(text=str(event.exception), reply_markup=keyboard)
 
