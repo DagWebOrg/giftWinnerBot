@@ -1,16 +1,9 @@
-from .models import BotUser, TrackingAccount, WorkAccount
+from .models import BotUser, TrackingAccount, WorkAccount, GiftPost
 from .tools import DatabaseManager
 from utils.exceptions import AccountAddingError
 
 
 class CRUD():
-    
-    @staticmethod
-    def loginfo():
-        with DatabaseManager() as session:
-            result = session.query(TrackingAccount)
-            print(result)
-    
     @staticmethod
     def get_users():
         with DatabaseManager() as session:
@@ -110,3 +103,15 @@ class CRUD():
                 session.commit()
             except Exception as e:
                 raise ValueError(f'Ошибка БД при удалении аккаунта.\n\n{e}')
+            
+    
+    # @staticmethod
+    # def create_gift_posts(posts: list):
+    #     with DatabaseManager() as session:
+    #         try:
+    #             new_post = GiftPost(id = id)
+    #             session.add(new_bot_user)
+    #             session.commit()
+    #         except Exception as e:
+    #             raise ValueError(f'Ошибка БД при пользователя бота в список разрешенных.\n\n{e}')
+            
