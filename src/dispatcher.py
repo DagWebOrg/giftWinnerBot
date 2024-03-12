@@ -15,6 +15,7 @@ from handlers.main import main_routes
 from handlers.authorization import authorization_routes
 from handlers.work_account import work_account_routes
 from handlers.tracking_account import tracking_account_routes
+from handlers.post import post_routes
 from handlers.other import other_routes
 
 
@@ -26,6 +27,7 @@ dp.include_router(main_routes.router)
 dp.include_router(authorization_routes.router)
 dp.include_router(work_account_routes.router)
 dp.include_router(tracking_account_routes.router)
+dp.include_router(post_routes.router)
 dp.include_router(other_routes.router)
 
 

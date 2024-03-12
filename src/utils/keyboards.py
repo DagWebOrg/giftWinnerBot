@@ -27,6 +27,15 @@ class KeyboardStorage():
         ],[
             KeyboardButton(text='Вернуться на главную 🏚'),
         ]])
+    def post_list():
+        return ReplyKeyboardMarkup(keyboard=[[
+            KeyboardButton(text='Искать новые посты 🔍'),
+            KeyboardButton(text='Удалить пост 🚫'),
+        ],[
+            KeyboardButton(text='Репост постов на рабочие аккаунты 📋'),
+        ],[
+            KeyboardButton(text='Вернуться на главную 🏚'),
+        ]])
     def kb_for_return():
         return ReplyKeyboardMarkup(keyboard=[[
             KeyboardButton(text='Вернуться на главную 🏚'),

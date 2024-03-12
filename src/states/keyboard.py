@@ -4,3 +4,4 @@ class KeyboardState(StatesGroup):
     initial = State()
     work_accounts_list = State()
     tracking_accounts_list = State()
+    post_list = State()

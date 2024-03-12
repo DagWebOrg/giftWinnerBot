@@ -71,11 +71,11 @@ class CRUD():
             try:
                 tracking_accounts = session.query(TrackingAccount).all()
                 session.expunge_all()
-                work_accounts = [{'account_id': item.account_id,
+                tracking_accounts = [{'account_id': item.account_id,
                                 'alias': item.alias,
                                 'last_scan_data': item.last_scan_data}
                                   for item in tracking_accounts]
-                return work_accounts
+                return tracking_accounts
             except Exception as e:
                 raise ValueError(f'Ошибка БД при получении списка аккаунтов.\n\n\n{e}')
 
@@ -105,13 +105,47 @@ class CRUD():
                 raise ValueError(f'Ошибка БД при удалении аккаунта.\n\n{e}')
             
     
-    # @staticmethod
-    # def create_gift_posts(posts: list):
-    #     with DatabaseManager() as session:
-    #         try:
-    #             new_post = GiftPost(id = id)
-    #             session.add(new_bot_user)
-    #             session.commit()
-    #         except Exception as e:
-    #             raise ValueError(f'Ошибка БД при пользователя бота в список разрешенных.\n\n{e}')
-            
+    @staticmethod
+    def create_posts(posts: list):
+        with DatabaseManager() as session:
+            try:
+                for post in posts:
+                    # Если добавляемый пост уже существует.
+                    existing_post = session.query(GiftPost).filter_by(post_id=post['post_id']).first()
+                    if existing_post:
+                        # Обновление существующей записи.
+                        existing_post.content = post['content']
+                    else:
+                        # Вставка новой записи.
+                        new_post = GiftPost(
+                            post_id=post['post_id'],
+                            content=post['content']
+                        )
+                        session.add(new_post)
+                session.commit()
+            except Exception as e:
+                raise ValueError(f'Ошибка БД при добавлении нового поста.\n\n{e}')
+
+    @staticmethod
+    def get_posts():
+        with DatabaseManager() as session:
+            try:
+                posts = session.query(GiftPost).all()
+                session.expunge_all()
+                posts = [{'post_id': item.post_id,
+                        'content': item.content
+                         } for item in posts]
+                return posts
+            except Exception as e:
+                raise ValueError(f'Ошибка БД при получении списка постов.\n\n\n{e}')
+
+
+    @staticmethod
+    def delete_post(post_id: str):
+        with DatabaseManager() as session:
+            try:
+                post = session.query(GiftPost).filter(GiftPost.post_id == post_id).one()
+                session.delete(post)
+                session.commit()
+            except Exception as e:
+                raise ValueError(f'Ошибка БД при удалении поста.\n\n{e}')
