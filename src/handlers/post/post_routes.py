@@ -6,7 +6,7 @@ from states.post import PostState
 
 from utils.permissions import is_authenticated
 from utils.keyboards import KeyboardStorage as kb
-from services.services import add_all_new_posts_to_database
+from services.services import add_all_new_posts_to_database, repost_all_new_posts_from_database
 
 
 from database.crud import CRUD
@@ -38,6 +38,21 @@ async def post_find(message: types.Message, state: FSMContext):
     await state.set_state(KeyboardState.post_list)
 
     information = f'Список постов:\n\n{CRUD.get_posts()}'
+    await message.answer(information, reply_markup=keyboard)
+
+
+@router.message(F.text == "Репост постов на рабочие аккаунты 📋")
+async def repost_posts(message: types.Message, state: FSMContext):
+    is_authenticated(message)
+    keyboard = types.ReplyKeyboardRemove()
+    await message.answer('🔎 Идет репост...', reply_markup=keyboard)
+
+    await repost_all_new_posts_from_database()
+
+    keyboard = kb.post_list()
+    await state.set_state(KeyboardState.post_list)
+
+    information = f'Операция прошла успешно!\n\nСписок постов:\n\n{CRUD.get_posts()}'
     await message.answer(information, reply_markup=keyboard)
 
 

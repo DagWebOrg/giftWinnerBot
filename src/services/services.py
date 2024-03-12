@@ -1,5 +1,5 @@
 from database.crud import CRUD
-from .api.api import get_posts_from_tracking_account
+from .api.api import get_posts_from_tracking_account, repost_posts_to_work_account
 
 
 async def add_all_new_posts_to_database():
@@ -10,7 +10,7 @@ async def add_all_new_posts_to_database():
         print(account['last_scan_data'].timestamp(), '<---')
         account_last_scan_data = account['last_scan_data'].timestamp()
 
-        response_obj = await get_posts_from_tracking_account(account['account_id'], 1)
+        response_obj = await get_posts_from_tracking_account(account['account_id'], count=1)
         posts = response_obj['response']['items']
 
         for post in posts:
@@ -32,5 +32,21 @@ async def add_all_new_posts_to_database():
     print(validated_posts)
 
 
-def repost_all_new_posts_from_database():
-    ...
+async def repost_all_new_posts_from_database():
+    posts = CRUD.get_posts()
+    work_accounts = CRUD.get_work_accounts()
+
+    for account in work_accounts:
+        access_token = account['access_token']
+
+        for post in posts:
+            post_id = post['post_id']
+
+            response_obj = await repost_posts_to_work_account(
+                access_token=access_token,
+                post_id=post_id,
+            )
+
+            print(response_obj)
+
+    CRUD.delete_all_posts()

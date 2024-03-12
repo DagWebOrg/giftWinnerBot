@@ -149,3 +149,14 @@ class CRUD():
                 session.commit()
             except Exception as e:
                 raise ValueError(f'Ошибка БД при удалении поста.\n\n{e}')
+            
+    
+    def delete_all_posts():
+        with DatabaseManager() as session:
+            try:
+                posts = session.query(GiftPost).all()
+                for post in posts:
+                    session.delete(post)
+                session.commit()
+            except Exception as e:
+                raise ValueError(f'Ошибка БД при удалении постов.\n\n{e}')
