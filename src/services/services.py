@@ -39,8 +39,12 @@ async def repost_all_new_posts_from_database():
     for account in work_accounts:
         access_token = account['access_token']
 
+        
+
         for post in posts:
             post_id = post['post_id']
+
+            print(post_id)
 
             response_obj = await repost_posts_to_work_account(
                 access_token=access_token,
