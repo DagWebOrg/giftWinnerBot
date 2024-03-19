@@ -1,4 +1,4 @@
-from .models import BotUser, TrackingAccount, WorkAccount, GiftPost
+from .models import BotUser, TrackingAccount, WorkAccount, GiftPost, ServiceToken
 from .tools import DatabaseManager
 from utils.exceptions import AccountAddingError
 
@@ -33,7 +33,8 @@ class CRUD():
                 work_accounts = session.query(WorkAccount).all()
                 session.expunge_all()
                 work_accounts = [{'alias': item.alias,
-                                'access_token': item.access_token}
+                                'login': item.login,
+                                'password': item.password}
                                   for item in work_accounts]
                 return work_accounts
             except Exception as e:
@@ -41,12 +42,13 @@ class CRUD():
 
 
     @staticmethod
-    def create_work_account(alias: str, access_token: str):
+    def create_work_account(alias: str, login: str, password):
         with DatabaseManager() as session:
             try:
                 new_work_account = WorkAccount(
                     alias = alias,
-                    access_token = access_token
+                    login = login,
+                    password = password
                 )
                 session.add(new_work_account)
                 session.commit()
@@ -64,6 +66,29 @@ class CRUD():
             except Exception as e:
                 raise ValueError(f'Ошибка БД при удалении аккаунта.\n\n{e}')
 
+    @staticmethod
+    def get_service_token():
+        with DatabaseManager() as session:
+            try:
+                service_token = session.query(ServiceToken)\
+                    .filter(ServiceToken.id == 1).one()
+                session.expunge_all()
+                return service_token.token
+            except Exception as e:
+                raise ValueError(f'Ошибка БД при получении токена. Возможно, он не был добавлен: \n\n\n{e}')
+
+
+    @staticmethod
+    def update_service_token(token: str):
+        with DatabaseManager() as session:
+            try:
+                # Указываем id=1, чтобы в случае, когда токен уже существует,
+                # он перезаписывался
+                new_service_token = ServiceToken(id=1, token=token)
+                session.merge(new_service_token)
+            except Exception as e:
+                raise AccountAddingError(f'Ошибка при обновлении токена.\n\n{e}')
+            
 
     @staticmethod
     def get_tracking_accounts():

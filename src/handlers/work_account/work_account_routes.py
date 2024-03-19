@@ -39,20 +39,29 @@ async def work_account_create_alias_entry(message: types.Message, state: FSMCont
     alias = message.text.strip()
     await state.set_data({'alias': alias})
     keyboard = kb.kb_for_return()
-    await state.set_state(WorkAccountState.create_access_token_entry)
-    await message.answer("Введите токен доступа аккаунта: ", reply_markup=keyboard)
+    await state.set_state(WorkAccountState.create_login_entry)
+    await message.answer("Введите логин аккаунта: ", reply_markup=keyboard)
 
 
-@router.message(WorkAccountState.create_access_token_entry)
-async def work_account_token_entry(message: types.Message, state: FSMContext, bot: Bot):
+@router.message(WorkAccountState.create_login_entry)
+async def work_account_login_entry(message: types.Message, state: FSMContext):
+    is_authenticated(message)
+    login = message.text.strip()
+    await state.update_data({'login': login})
+    keyboard = kb.kb_for_return()
+    await state.set_state(WorkAccountState.create_password_entry)
+    await message.answer("Введите пароль аккаунта: ", reply_markup=keyboard)
+
+
+@router.message(WorkAccountState.create_password_entry)
+async def work_account_password_entry(message: types.Message, state: FSMContext, bot: Bot):
     is_authenticated(message)
 
-    # Удаляем токен из чата после введения.
+    # Удаляем пароль из чата после введения.
     await bot.delete_message(chat_id=message.chat.id, message_id=message.message_id)
 
-
-    access_token = message.text.strip()
-    await state.update_data({'access_token': access_token})
+    password = message.text.strip()
+    await state.update_data({'password': password})
 
     data = await state.get_data()
     CRUD.create_work_account(**data)

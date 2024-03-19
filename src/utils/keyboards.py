@@ -11,6 +11,8 @@ class KeyboardStorage():
         ],[
             KeyboardButton(text='Информация о розыгрышах 🛍'),
         ],[
+            KeyboardButton(text='Добавить/обновить токен 🎛'),
+        ],[
             KeyboardButton(text='Новые сообщения 📩'),
         ]])
     def work_accounts_list():

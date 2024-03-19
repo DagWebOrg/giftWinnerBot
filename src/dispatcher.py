@@ -17,6 +17,7 @@ from handlers.work_account import work_account_routes
 from handlers.tracking_account import tracking_account_routes
 from handlers.post import post_routes
 from handlers.other import other_routes
+from handlers.service_token import service_token_routes
 
 
 token = os.getenv('BOT_TOKEN')
@@ -28,6 +29,7 @@ dp.include_router(authorization_routes.router)
 dp.include_router(work_account_routes.router)
 dp.include_router(tracking_account_routes.router)
 dp.include_router(post_routes.router)
+dp.include_router(service_token_routes.router)
 dp.include_router(other_routes.router)
 
 

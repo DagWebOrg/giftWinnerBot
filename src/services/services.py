@@ -1,5 +1,7 @@
 import json
+import asyncio
 
+from vk_api import auth
 from database.crud import CRUD
 from .api.api import get_posts_from_tracking_account, repost_posts_to_work_account
 
@@ -12,7 +14,7 @@ async def add_all_new_posts_to_database(message):
         print(account['last_scan_data'].timestamp(), '<---')
         account_last_scan_data = account['last_scan_data'].timestamp()
 
-        response_obj = await get_posts_from_tracking_account(account['account_id'], count=1)
+        response_obj = await get_posts_from_tracking_account(account['account_id'], count=10)
 
         # Если вернулся ответ с ошибкой.
         if 'error' in response_obj.keys():
@@ -53,25 +55,38 @@ async def add_all_new_posts_to_database(message):
     print(validated_posts)
 
 
-async def repost_all_new_posts_from_database():
+async def repost_all_new_posts_from_database(message):
     posts = CRUD.get_posts()
     work_accounts = CRUD.get_work_accounts()
 
     for account in work_accounts:
-        access_token = account['access_token']
+        print(account['login'], '---', account['password'])
 
+        try:
+            me = auth.auth(login=account['login'], password=account['password'])
+        except Exception as e:
+            await message.answer(f'Ошибка при входе в аккаунт {account["login"]} --- \n{e}')
+            continue
         
 
         for post in posts:
             post_id = post['post_id']
 
-            print(post_id)
+            # post_response = me.method(method='wall.addLike', values={
+            #     'post_id': post_id,
+            # })
+            try:
+                resposne_obj = me.method(method='wall.repost', values={
+                    'object': post_id,
+                })
+            except Exception as e:
+                await message.answer(f'Ошибка при репосте поста {post["post_id"]}:\n{e}')
+                continue
 
-            response_obj = await repost_posts_to_work_account(
-                access_token=access_token,
-                post_id=post_id,
-            )
+            # print(post_response)
+            print(resposne_obj,'\n\n')
 
-            print(response_obj)
+
 
     CRUD.delete_all_posts()
+

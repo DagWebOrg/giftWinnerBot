@@ -5,10 +5,10 @@ from utils.api import make_api_request
 
 
 async def get_posts_from_tracking_account(account_id, count = 1):
-    some_access_token = CRUD.get_work_accounts()[0]['access_token']
+    service_token = CRUD.get_service_token()
 
     data = {
-    'access_token': some_access_token,
+    'access_token': service_token,
     'v': 5.199,
     'owner_id': account_id,
     'count': count,

@@ -20,7 +20,6 @@ class TrackingAccount(Base):
 
     account_id: Mapped[str] = mapped_column(primary_key=True)
     alias: Mapped[str] = mapped_column(String(100), unique=True)
-    # last_scan_data: Mapped[DateTime] = mapped_column(DateTime(timezone=True), default=datetime.datetime.now())
     last_scan_data: Mapped[datetime.datetime] = mapped_column(DateTime(timezone=True), default=datetime.datetime.now())
 
     # def __repr__(self) -> str:
@@ -34,11 +33,23 @@ class WorkAccount(Base):
     # Служебный id.
     id: Mapped[int] = mapped_column(primary_key=True)
     alias: Mapped[str] = mapped_column(String(100), unique=True)
-    access_token: Mapped[str] = mapped_column(String(255), unique=True)
+    login: Mapped[str] = mapped_column(String(30), unique=True)
+    password: Mapped[str] = mapped_column(String(100), unique=True)
 
     # def __repr__(self) -> str:
     #     return f"{self.alias}"
 
+
+class ServiceToken(Base):
+    __tablename__ = "service_token"
+    __table_args__ = {'extend_existing': True}
+
+    # Служебный id.
+    id: Mapped[int] = mapped_column(primary_key=True)
+    token: Mapped[str] = mapped_column(String(500), unique=True)
+
+    # def __repr__(self) -> str:
+    #     return f"{self.alias}"
 
 class BotUser(Base):
     __tablename__ = "bot_user"

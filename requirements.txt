@@ -17,3 +17,6 @@ python-dotenv==1.0.1
 SQLAlchemy==2.0.27
 typing_extensions==4.9.0
 yarl==1.9.4
+beautifulsoup4
+requests
+websocket-client
