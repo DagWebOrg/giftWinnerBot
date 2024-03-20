@@ -19,7 +19,7 @@ router = Router(name=__name__)
 async def post_list(message: types.Message, state: FSMContext):
     is_authenticated(message)
 
-    information = f'Список постов:\n\n{CRUD.get_posts()}'
+    information = f'Список постов:\n\n{len(CRUD.get_posts())}'
 
     keyboard = kb.post_list()
     await state.set_state(KeyboardState.post_list)
@@ -37,7 +37,7 @@ async def post_find(message: types.Message, state: FSMContext):
     keyboard = kb.post_list()
     await state.set_state(KeyboardState.post_list)
 
-    information = f'Список постов:\n\n{CRUD.get_posts()}'
+    information = f'Список постов:\n\n{len(CRUD.get_posts())}'
     await message.answer(information, reply_markup=keyboard)
 
 
@@ -52,7 +52,7 @@ async def repost_posts(message: types.Message, state: FSMContext):
     keyboard = kb.post_list()
     await state.set_state(KeyboardState.post_list)
 
-    information = f'Операция прошла успешно!\n\nСписок постов:\n\n{CRUD.get_posts()}'
+    information = f'Операция прошла успешно!\n\nСписок постов:\n\n{len(CRUD.get_posts())}'
     await message.answer(information, reply_markup=keyboard)
 
 
@@ -73,7 +73,7 @@ async def post_delete_id_entry(message: types.Message, state: FSMContext):
 
     CRUD.delete_post(message.text)
 
-    information = f'Пост был успешно удален.\n\n{CRUD.get_posts()}'
+    information = f'Пост был успешно удален.\n\n{len(CRUD.get_posts())}'
 
     keyboard = kb.post_list()
     await state.set_state(KeyboardState.post_list)
