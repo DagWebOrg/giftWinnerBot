@@ -1,6 +1,7 @@
 import json
 import asyncio
 from datetime import datetime
+import time
 
 from vk_api import auth
 from database.crud import CRUD
@@ -86,19 +87,22 @@ async def repost_all_new_posts_from_database(message):
             group_id = post_id.split("-")[1].split("_")[0]
             group_post_id = post_id.split("-")[1].split("_")[1]
 
+            datetime.time.slee
 
-            print(me.method(method='wall.createComment', values={
+            try:
+                time.sleep(2)
+                print(me.method(method='wall.createComment', values={
                     'owner_id': f'-{group_id}',
                     'post_id': group_post_id,
                     'message': 'участвую'
                 }))
 
-            try:
+                time.sleep(3)
                 resposne_obj = me.method(method='wall.repost', values={
                     'object': post_id,
                 })
 
-
+                time.sleep(2)
                 print(me.method(method='groups.join', values={
                     'group_id': group_id,
                 }))
