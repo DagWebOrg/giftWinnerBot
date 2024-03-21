@@ -7,7 +7,7 @@ from vk_api import auth
 from database.crud import CRUD
 from .api.api import get_posts_from_tracking_account, repost_posts_to_work_account
 
-GIFT_WORDS = ['конкурс', 'розыгрыш', "итоги", "дар", "репост", "побед", "билет", "абонемент"]
+GIFT_WORDS = ['конкурс', 'розыгрыш', "итоги", "дар", "репост", "побед", "билет", "абонемент", 'разыгр']
 
 def string_contain(string: str, sub_str_list: list):
     result = False
@@ -42,7 +42,7 @@ async def add_all_new_posts_to_database(message):
             if 'copy_history' not in post.keys():
                 continue
             # Если публикация старая.
-            print(datetime.fromtimestamp(account_last_scan_data),'--', datetime.fromtimestamp(post['date']))
+            # print(datetime.fromtimestamp(account_last_scan_data),'--', datetime.fromtimestamp(post['date']))
             if account_last_scan_data > post['date']:
                 continue
 
@@ -50,7 +50,7 @@ async def add_all_new_posts_to_database(message):
 
             post_id = f"wall{str(original_post['owner_id'])}_{str(original_post['id'])}"
             
-            if string_contain(original_post['text'], []):
+            if string_contain(original_post['text'], GIFT_WORDS):
                 content = original_post['text'][:100]
                 validated_posts.append({
                 'post_id': post_id,
@@ -74,6 +74,7 @@ async def repost_all_new_posts_from_database(message):
     work_accounts = CRUD.get_work_accounts()
 
 
+
     for account in work_accounts:
         try:
             me = auth.auth(login=account['login'], password=account['password'])
@@ -84,27 +85,25 @@ async def repost_all_new_posts_from_database(message):
 
         for post in posts:
             post_id = post['post_id']
-            group_id = post_id.split("-")[1].split("_")[0]
-            group_post_id = post_id.split("-")[1].split("_")[1]
-
-            datetime.time.slee
+            group_id = post_id[4:].split("_")[0]
+            group_post_id = post_id[4:].split("_")[1]
 
             try:
-                time.sleep(2)
+                time.sleep(60)
                 print(me.method(method='wall.createComment', values={
-                    'owner_id': f'-{group_id}',
+                    'owner_id': group_id,
                     'post_id': group_post_id,
                     'message': 'участвую'
                 }))
 
-                time.sleep(3)
+                time.sleep(5)
                 resposne_obj = me.method(method='wall.repost', values={
                     'object': post_id,
                 })
 
-                time.sleep(2)
+                time.sleep(5)
                 print(me.method(method='groups.join', values={
-                    'group_id': group_id,
+                    'group_id': abs(int(group_id)),
                 }))
 
                 
