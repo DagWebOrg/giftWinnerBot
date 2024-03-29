@@ -9,8 +9,6 @@ from database.models import apply_models
 from utils.permissions import set_allowed_users_to_settings
 
 
-# logging.basicConfig(level=logging.INFO)
-
 async def main():
     apply_models()
     set_allowed_users_to_settings()

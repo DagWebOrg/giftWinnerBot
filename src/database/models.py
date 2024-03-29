@@ -34,7 +34,7 @@ class WorkAccount(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     alias: Mapped[str] = mapped_column(String(100), unique=True)
     login: Mapped[str] = mapped_column(String(30), unique=True)
-    password: Mapped[str] = mapped_column(String(100), unique=True)
+    password: Mapped[str] = mapped_column(String(100))
 
     # def __repr__(self) -> str:
     #     return f"{self.alias}"
