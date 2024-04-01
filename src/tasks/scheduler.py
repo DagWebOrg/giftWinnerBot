@@ -1,13 +1,14 @@
 from celery.schedules import crontab
+from tasks import app
 
 
 beat_schedule = {
     'repost_morning': {
-        'task': 'tasks.tasks.search_and_repost_posts',
-        'schedule': crontab(hour=16, minute=17),
+        'task': 'tasks.search_and_repost_posts',
+        'schedule': crontab(hour=16, minute=51),
     },
     'repost_evening': {
-        'task': 'tasks.tasks.search_and_repost_posts',
-        'schedule': crontab(hour=20, minute=30),
+        'task': 'tasks.search_and_repost_posts',
+        'schedule': crontab(hour=16, minute=50),
     },
 }
