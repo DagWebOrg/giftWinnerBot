@@ -7,18 +7,13 @@ app = Celery('tasks', backend='redis://localhost:6379',
 
 @app.task
 def search_and_repost_posts():
-    print('aaa')
-    # await get_posts_from_tracking_account()
-    # await repost_all_new_posts_from_database()
+    await get_posts_from_tracking_account()
+    await repost_all_new_posts_from_database()
 
 
-beat_schedule = {
-    'repost_morning': {
-        'task': 'search_and_repost_posts',
-        'schedule': crontab(hour=16, minute=51),
-    },
-    'repost_evening': {
-        'task': 'search_and_repost_posts',
-        'schedule': crontab(hour=16, minute=50),
+app.conf.beat_schedule = {
+    'repost': {
+        'task': 'tasks.search_and_repost_posts',
+        'schedule': 7200.0,
     },
 }
