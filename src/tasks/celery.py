@@ -14,7 +14,7 @@ app.conf.update(
 @app.on_after_configure.connect
 def setup_periodic_tasks(sender, **kwargs):
 
-    sender.add_periodic_task(60.0, repost.s(), name='Run every second')
+    sender.add_periodic_task(10800.0, repost.s(), name='Periodic repost')
     # sender.add_periodic_task(crontab(minute=0, hour=12), repost.s(), name='Morning repost')
     # sender.add_periodic_task(crontab(minute=17, hour=17), repost.s(), name='Evening repost')
 

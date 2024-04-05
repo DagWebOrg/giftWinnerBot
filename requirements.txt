@@ -28,6 +28,7 @@ pydantic_core==2.14.6
 python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
 redis==5.0.3
+redis-cli==1.0.1
 requests==2.31.0
 six==1.16.0
 soupsieve==2.5
