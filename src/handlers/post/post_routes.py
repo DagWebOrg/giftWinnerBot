@@ -32,7 +32,7 @@ async def post_find(message: types.Message, state: FSMContext):
     keyboard = types.ReplyKeyboardRemove()
     await message.answer('🔎 Идет поиск...', reply_markup=keyboard)
 
-    await add_all_new_posts_to_database(message)
+    await add_all_new_posts_to_database()
 
     keyboard = kb.post_list()
     await state.set_state(KeyboardState.post_list)
@@ -47,7 +47,7 @@ async def repost_posts(message: types.Message, state: FSMContext):
     keyboard = types.ReplyKeyboardRemove()
     await message.answer('🔎 Идет репост...', reply_markup=keyboard)
 
-    await repost_all_new_posts_from_database(message)
+    await repost_all_new_posts_from_database()
 
     keyboard = kb.post_list()
     await state.set_state(KeyboardState.post_list)

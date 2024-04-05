@@ -9,7 +9,7 @@ from .api.api import get_posts_from_tracking_account
 from logger.config import LOGGER
 
 
-async def add_all_new_posts_to_database(message):
+async def add_all_new_posts_to_database():
     tracking_accounts = CRUD.get_tracking_accounts()
     validated_posts = []
 
@@ -47,7 +47,7 @@ async def add_all_new_posts_to_database(message):
     print(validated_posts)
 
 
-async def repost_all_new_posts_from_database(message):
+async def repost_all_new_posts_from_database():
     posts = CRUD.get_posts()
     work_accounts = CRUD.get_work_accounts()
     for account in work_accounts:
