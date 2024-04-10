@@ -20,7 +20,7 @@ class TrackingAccount(Base):
 
     account_id: Mapped[str] = mapped_column(primary_key=True)
     alias: Mapped[str] = mapped_column(String(100), unique=True)
-    last_scan_data: Mapped[datetime.datetime] = mapped_column(DateTime(timezone=True), default=datetime.datetime.now(tz=datetime.timezone.utc))
+    last_scan_data: Mapped[datetime.datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.datetime.now(tz=datetime.timezone.utc))
 
     # def __repr__(self) -> str:
     #     return f"{self.name}"
