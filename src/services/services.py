@@ -64,8 +64,17 @@ async def repost_all_new_posts_from_database():
             group_post_id = full_post_id[4:].split("_")[1]
 
             try:
+                # проверка на то, была ли репостнута запись ранее.
+                already_reposted = int(me.method(method='likes.isLiked', values={
+                    'owner_id': group_id,
+                    'item_id': group_post_id,
+                    'type': 'post'
+                })['response']['copied'])
 
-                time.sleep(60)
+                if already_reposted:
+                    LOGGER.info(f"аккаунт {account['alias']} пропустил повторяющийся пост {full_post_id}")
+                    continue
+
                 LOGGER.info(f"аккаунт {account['alias']} комментирует запись {full_post_id}")
                 print(me.method(method='wall.createComment', values={
                     'owner_id': group_id,
@@ -84,6 +93,8 @@ async def repost_all_new_posts_from_database():
                 print(me.method(method='groups.join', values={
                     'group_id': abs(int(group_id)),
                 }))
+                time.sleep(60)
+
 
                 
 
