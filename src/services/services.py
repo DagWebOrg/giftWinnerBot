@@ -69,7 +69,7 @@ async def repost_all_new_posts_from_database():
                     'owner_id': group_id,
                     'item_id': group_post_id,
                     'type': 'post'
-                })['response']['copied'])
+                })['copied'])
 
                 if already_reposted:
                     LOGGER.info(f"аккаунт {account['alias']} пропустил повторяющийся пост {full_post_id}")
@@ -106,18 +106,7 @@ async def repost_all_new_posts_from_database():
             finally:
                 LOGGER.info(f'----------КОНЕЦ-РЕПОСТА----------')
 
-
-            # print(post_response)
-            print(resposne_obj,'\n\n')
-
-
-
     CRUD.delete_all_posts()
-
-
-
-
-
 
 
 
