@@ -16,12 +16,12 @@ sys.path.append(BASE_DIR)
 CONFIG = {
     'db':{
         'info': {
-            'name': os.getenv('DB_NAME'),
-            'url': os.getenv('DB_URL'), 
+            'name': os.getenv('POSTGRES_NAME'),
+            'url': os.getenv('POSTGRES_URL'), 
         },
         'user': {
-            'username': os.getenv('DB_USERNAME'),
-            'password': os.getenv('DB_PASSWORD'),
+            'username': os.getenv('POSTGRES_USERNAME'),
+            'password': os.getenv('POSTGRES_PASSWORD'),
         }
     }
 }

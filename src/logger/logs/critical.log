@@ -4590,3 +4590,33 @@ AttributeError: 'function' object has no attribute 's'
 2024-04-05 12:32:22,606 - WARNING - connection.py - 669 - No hostname was supplied. Reverting to default 'localhost'
 2024-04-05 12:35:04,317 - WARNING - connection.py - 669 - No hostname was supplied. Reverting to default 'localhost'
 2024-04-05 12:38:34,319 - WARNING - connection.py - 669 - No hostname was supplied. Reverting to default 'localhost'
+2024-04-24 11:42:53,350 - INFO - dispatcher.py - 527 - Start polling
+2024-04-24 11:42:53,398 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-04-24 11:44:49,809 - INFO - dispatcher.py - 172 - Update id=588933753 is handled. Duration 377 ms by bot id=7090078691
+2024-04-24 11:44:51,942 - INFO - dispatcher.py - 172 - Update id=588933754 is handled. Duration 87 ms by bot id=7090078691
+2024-04-24 11:44:54,025 - INFO - dispatcher.py - 172 - Update id=588933755 is handled. Duration 93 ms by bot id=7090078691
+2024-04-24 11:44:57,442 - INFO - dispatcher.py - 172 - Update id=588933756 is handled. Duration 88 ms by bot id=7090078691
+2024-04-24 11:45:02,616 - INFO - dispatcher.py - 172 - Update id=588933757 is handled. Duration 397 ms by bot id=7090078691
+2024-04-24 11:48:22,837 - INFO - dispatcher.py - 172 - Update id=588933758 is handled. Duration 220 ms by bot id=7090078691
+2024-04-24 11:48:24,894 - INFO - dispatcher.py - 172 - Update id=588933759 is handled. Duration 185 ms by bot id=7090078691
+2024-04-24 11:48:32,266 - INFO - dispatcher.py - 172 - Update id=588933760 is handled. Duration 144 ms by bot id=7090078691
+2024-04-24 11:48:33,833 - INFO - dispatcher.py - 172 - Update id=588933761 is handled. Duration 196 ms by bot id=7090078691
+2024-04-24 11:48:35,785 - INFO - dispatcher.py - 172 - Update id=588933762 is handled. Duration 344 ms by bot id=7090078691
+2024-04-24 11:48:37,431 - INFO - dispatcher.py - 172 - Update id=588933763 is handled. Duration 91 ms by bot id=7090078691
+2024-04-24 11:51:00,868 - INFO - dispatcher.py - 172 - Update id=588933764 is handled. Duration 273 ms by bot id=7090078691
+2024-04-24 11:51:12,269 - INFO - dispatcher.py - 172 - Update id=588933765 is handled. Duration 117 ms by bot id=7090078691
+2024-04-24 11:51:19,099 - INFO - dispatcher.py - 172 - Update id=588933766 is handled. Duration 107 ms by bot id=7090078691
+2024-04-24 11:51:20,251 - INFO - dispatcher.py - 172 - Update id=588933767 is handled. Duration 109 ms by bot id=7090078691
+2024-04-24 11:51:47,215 - INFO - dispatcher.py - 172 - Update id=588933768 is handled. Duration 211 ms by bot id=7090078691
+2024-04-24 11:51:52,029 - INFO - dispatcher.py - 172 - Update id=588933769 is handled. Duration 140 ms by bot id=7090078691
+2024-04-24 11:51:54,271 - INFO - dispatcher.py - 172 - Update id=588933770 is handled. Duration 124 ms by bot id=7090078691
+2024-04-24 11:52:03,725 - INFO - dispatcher.py - 172 - Update id=588933771 is handled. Duration 72 ms by bot id=7090078691
+2024-04-24 11:52:08,551 - INFO - dispatcher.py - 172 - Update id=588933772 is handled. Duration 112 ms by bot id=7090078691
+2024-04-24 11:52:09,312 - INFO - dispatcher.py - 172 - Update id=588933773 is handled. Duration 109 ms by bot id=7090078691
+2024-04-24 11:52:10,513 - INFO - dispatcher.py - 172 - Update id=588933774 is handled. Duration 118 ms by bot id=7090078691
+2024-04-24 11:52:12,091 - INFO - dispatcher.py - 172 - Update id=588933775 is handled. Duration 221 ms by bot id=7090078691
+2024-04-24 11:52:18,984 - INFO - dispatcher.py - 172 - Update id=588933776 is handled. Duration 5766 ms by bot id=7090078691
+2024-04-24 11:52:24,214 - INFO - dispatcher.py - 172 - Update id=588933777 is handled. Duration 133 ms by bot id=7090078691
+2024-04-24 11:52:50,006 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-04-24 11:52:50,008 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-04-24 11:52:50,008 - INFO - dispatcher.py - 554 - Polling stopped
