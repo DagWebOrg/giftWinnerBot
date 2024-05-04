@@ -66,7 +66,7 @@ class GiftPost(Base):
     __table_args__ = {'extend_existing': True}
 
     post_id: Mapped[str] = mapped_column(primary_key=True)
-    content: Mapped[str] = mapped_column(String(100), nullable=True)
+    content: Mapped[str] = mapped_column(String(), nullable=True)
 
     
 def apply_models():

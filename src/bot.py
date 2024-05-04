@@ -1,7 +1,6 @@
 import logging
 
 import asyncio
-
 from aiogram.methods import DeleteWebhook
 
 from dispatcher import bot, dp

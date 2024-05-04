@@ -5,7 +5,7 @@ import time
 
 from vk_api import auth
 from database.crud import CRUD
-from .api.api import get_posts_from_tracking_account
+from .http_requests.api import get_posts_from_api
 from logger.config import LOGGER
 
 
@@ -17,7 +17,7 @@ async def add_all_new_posts_to_database():
     for account in tracking_accounts:
         print(account['last_scan_data'].timestamp(), account['alias'])
 
-        response_obj = await get_posts_from_tracking_account(account['account_id'], count=20)
+        response_obj = await get_posts_from_api(account['account_id'], count=1)
 
         # Если вернулся ответ с ошибкой.
         if 'error' in response_obj.keys():
