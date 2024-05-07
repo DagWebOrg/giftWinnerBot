@@ -7678,3 +7678,302 @@ TypeError: unhashable type: 'dict'
 2024-05-05 00:58:41,160 - WARNING - dispatcher.py - 455 - Received SIGINT signal
 2024-05-05 00:58:41,162 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
 2024-05-05 00:58:41,162 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-05 17:04:41,573 - INFO - dispatcher.py - 527 - Start polling
+2024-05-05 17:04:41,652 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-05 17:05:28,660 - INFO - dispatcher.py - 172 - Update id=588934110 is handled. Duration 446 ms by bot id=7090078691
+2024-05-05 17:05:33,671 - INFO - dispatcher.py - 172 - Update id=588934111 is handled. Duration 1134 ms by bot id=7090078691
+2024-05-05 17:11:02,287 - INFO - dispatcher.py - 172 - Update id=588934112 is handled. Duration 989 ms by bot id=7090078691
+2024-05-05 17:12:06,467 - INFO - dispatcher.py - 172 - Update id=588934113 is handled. Duration 2514 ms by bot id=7090078691
+2024-05-05 19:00:03,263 - ERROR - dispatcher.py - 219 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2024-05-05 19:00:03,266 - WARNING - dispatcher.py - 221 - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7090078691)
+2024-05-05 19:00:14,469 - INFO - dispatcher.py - 233 - Connection established (tryings = 1, bot id = 7090078691)
+2024-05-05 19:30:02,228 - INFO - dispatcher.py - 172 - Update id=588934114 is handled. Duration 240 ms by bot id=7090078691
+2024-05-05 19:30:03,346 - INFO - dispatcher.py - 172 - Update id=588934115 is handled. Duration 350 ms by bot id=7090078691
+2024-05-05 19:30:05,247 - INFO - dispatcher.py - 172 - Update id=588934116 is handled. Duration 111 ms by bot id=7090078691
+2024-05-05 19:30:07,257 - INFO - dispatcher.py - 172 - Update id=588934117 is handled. Duration 75 ms by bot id=7090078691
+2024-05-05 19:30:18,113 - INFO - dispatcher.py - 172 - Update id=588934118 is handled. Duration 96 ms by bot id=7090078691
+2024-05-05 19:30:24,757 - INFO - dispatcher.py - 172 - Update id=588934119 is handled. Duration 255 ms by bot id=7090078691
+2024-05-05 19:30:27,121 - INFO - dispatcher.py - 172 - Update id=588934120 is handled. Duration 74 ms by bot id=7090078691
+2024-05-05 19:30:33,975 - INFO - dispatcher.py - 172 - Update id=588934121 is handled. Duration 89 ms by bot id=7090078691
+2024-05-05 19:39:56,058 - INFO - dispatcher.py - 172 - Update id=588934122 is handled. Duration 235 ms by bot id=7090078691
+2024-05-05 19:39:57,668 - INFO - dispatcher.py - 172 - Update id=588934123 is handled. Duration 140 ms by bot id=7090078691
+2024-05-05 19:40:11,445 - INFO - dispatcher.py - 172 - Update id=588934124 is handled. Duration 85 ms by bot id=7090078691
+2024-05-05 19:41:35,098 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-05 19:41:35,107 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-05 19:41:35,109 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-05 19:42:29,400 - INFO - dispatcher.py - 527 - Start polling
+2024-05-05 19:42:29,446 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-05 19:42:32,611 - ERROR - permissions.py - 14 - Пользователь с id 723054122 не авторизован!
+2024-05-05 19:42:32,922 - INFO - dispatcher.py - 172 - Update id=588934125 is handled. Duration 312 ms by bot id=7090078691
+2024-05-05 19:42:38,800 - INFO - dispatcher.py - 172 - Update id=588934126 is handled. Duration 144 ms by bot id=7090078691
+2024-05-05 19:42:44,261 - INFO - dispatcher.py - 172 - Update id=588934127 is handled. Duration 186 ms by bot id=7090078691
+2024-05-05 19:42:50,190 - INFO - dispatcher.py - 172 - Update id=588934128 is handled. Duration 91 ms by bot id=7090078691
+2024-05-05 19:43:20,699 - INFO - dispatcher.py - 172 - Update id=588934129 is handled. Duration 373 ms by bot id=7090078691
+2024-05-05 19:43:24,059 - INFO - dispatcher.py - 172 - Update id=588934130 is handled. Duration 147 ms by bot id=7090078691
+2024-05-05 19:43:26,912 - INFO - dispatcher.py - 172 - Update id=588934131 is handled. Duration 95 ms by bot id=7090078691
+2024-05-05 19:43:56,878 - INFO - dispatcher.py - 172 - Update id=588934132 is handled. Duration 246 ms by bot id=7090078691
+2024-05-05 19:44:23,200 - INFO - dispatcher.py - 172 - Update id=588934133 is handled. Duration 309 ms by bot id=7090078691
+2024-05-05 19:44:24,692 - INFO - dispatcher.py - 172 - Update id=588934134 is handled. Duration 125 ms by bot id=7090078691
+2024-05-05 19:44:29,610 - INFO - dispatcher.py - 172 - Update id=588934135 is handled. Duration 76 ms by bot id=7090078691
+2024-05-05 19:44:35,270 - INFO - dispatcher.py - 172 - Update id=588934136 is handled. Duration 120 ms by bot id=7090078691
+2024-05-05 19:44:37,996 - INFO - dispatcher.py - 172 - Update id=588934137 is handled. Duration 101 ms by bot id=7090078691
+2024-05-05 19:44:42,128 - INFO - dispatcher.py - 172 - Update id=588934138 is handled. Duration 189 ms by bot id=7090078691
+2024-05-05 19:44:43,350 - INFO - dispatcher.py - 172 - Update id=588934139 is handled. Duration 209 ms by bot id=7090078691
+2024-05-05 19:44:44,215 - INFO - dispatcher.py - 172 - Update id=588934140 is handled. Duration 103 ms by bot id=7090078691
+2024-05-05 19:44:47,210 - INFO - dispatcher.py - 172 - Update id=588934141 is handled. Duration 136 ms by bot id=7090078691
+2024-05-05 19:44:51,041 - INFO - dispatcher.py - 172 - Update id=588934142 is handled. Duration 173 ms by bot id=7090078691
+2024-05-05 19:45:01,829 - INFO - dispatcher.py - 172 - Update id=588934143 is handled. Duration 71 ms by bot id=7090078691
+2024-05-05 19:45:08,074 - INFO - dispatcher.py - 172 - Update id=588934144 is handled. Duration 247 ms by bot id=7090078691
+2024-05-05 19:45:09,659 - INFO - dispatcher.py - 172 - Update id=588934145 is handled. Duration 117 ms by bot id=7090078691
+2024-05-05 19:45:11,225 - INFO - dispatcher.py - 172 - Update id=588934146 is handled. Duration 239 ms by bot id=7090078691
+2024-05-05 19:45:12,734 - INFO - dispatcher.py - 172 - Update id=588934147 is handled. Duration 644 ms by bot id=7090078691
+2024-05-05 19:49:08,996 - INFO - dispatcher.py - 172 - Update id=588934148 is handled. Duration 931 ms by bot id=7090078691
+2024-05-05 19:49:11,429 - INFO - vk_api.py - 172 - Auth with login: +79886924592
+2024-05-05 19:49:11,429 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-05 19:49:11,429 - INFO - vk_api.py - 434 - No remixsid
+2024-05-05 19:49:11,430 - INFO - vk_api.py - 202 - remixsid from config is not valid: None
+2024-05-05 19:49:11,430 - INFO - vk_api.py - 242 - Logging in...
+2024-05-05 19:49:12,036 - INFO - vk_api.py - 323 - Got remixsid
+2024-05-05 19:49:12,039 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-05 19:49:12,039 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-05 19:49:12,040 - INFO - vk_api.py - 209 - access_token from config is not valid: None
+2024-05-05 19:49:12,289 - INFO - vk_api.py - 543 - Got access_token
+2024-05-05 19:49:12,423 - INFO - utils.py - 111 - Аккаунт Екатерина Фокина комментирует пост с id wall-118335380_44292
+2024-05-05 19:49:15,049 - INFO - utils.py - 115 - аккаунт Екатерина Фокина репостит запись wall-118335380_44292
+2024-05-05 19:49:17,426 - INFO - utils.py - 119 - аккаунт Екатерина Фокина вступает в группу поста wall-118335380_44292
+2024-05-05 19:49:17,475 - ERROR - utils.py - 132 - Ошибка при работе с постом wall-118335380_44292:
+[15] Access denied: you are already in this community
+2024-05-05 19:49:17,475 - INFO - utils.py - 135 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-118335380_44292----------
+2024-05-05 19:49:17,699 - INFO - dispatcher.py - 172 - Update id=588934149 is handled. Duration 6402 ms by bot id=7090078691
+2024-05-05 19:51:13,601 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-05 19:51:13,604 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-05 19:51:13,605 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-05 19:51:16,702 - INFO - dispatcher.py - 527 - Start polling
+2024-05-05 19:51:16,806 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-05 19:52:41,580 - INFO - dispatcher.py - 172 - Update id=588934150 is handled. Duration 1023 ms by bot id=7090078691
+2024-05-05 19:52:42,609 - INFO - vk_api.py - 172 - Auth with login: +79886924592
+2024-05-05 19:52:42,609 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-05 19:52:42,707 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-05 19:52:42,707 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-05 19:52:43,291 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-05 19:52:43,397 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-05 19:52:43,783 - INFO - utils.py - 111 - Аккаунт Екатерина Фокина комментирует пост с id wall-118335380_44292
+2024-05-05 19:52:46,404 - INFO - utils.py - 115 - аккаунт Екатерина Фокина репостит запись wall-118335380_44292
+2024-05-05 19:52:48,722 - INFO - utils.py - 119 - аккаунт Екатерина Фокина вступает в группу поста wall-118335380_44292
+2024-05-05 19:52:48,788 - ERROR - utils.py - 132 - Ошибка при работе с постом wall-118335380_44292:
+[15] Access denied: you are already in this community
+2024-05-05 19:52:48,789 - INFO - utils.py - 136 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-118335380_44292----------
+2024-05-05 19:52:48,907 - INFO - dispatcher.py - 172 - Update id=588934151 is handled. Duration 6464 ms by bot id=7090078691
+2024-05-05 19:53:22,434 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-05 19:53:22,437 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-05 19:53:22,438 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-05 19:54:03,102 - INFO - dispatcher.py - 527 - Start polling
+2024-05-05 19:54:03,166 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-05 19:55:01,608 - INFO - dispatcher.py - 172 - Update id=588934152 is handled. Duration 1197 ms by bot id=7090078691
+2024-05-05 19:55:03,021 - INFO - vk_api.py - 172 - Auth with login: +79886924592
+2024-05-05 19:55:03,021 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-05 19:55:03,104 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-05 19:55:03,104 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-05 19:55:03,625 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-05 19:55:03,747 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-05 19:55:04,197 - INFO - utils.py - 111 - Аккаунт Екатерина Фокина комментирует пост с id wall-118335380_44292
+2024-05-05 19:55:06,893 - INFO - utils.py - 115 - аккаунт Екатерина Фокина репостит запись wall-118335380_44292
+2024-05-05 19:55:09,344 - INFO - utils.py - 119 - аккаунт Екатерина Фокина вступает в группу поста wall-118335380_44292
+2024-05-05 19:55:09,416 - ERROR - utils.py - 132 - Ошибка при работе с постом wall-118335380_44292:
+[15] Access denied: you are already in this community
+2024-05-05 19:55:09,417 - INFO - utils.py - 136 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-118335380_44292----------
+2024-05-05 19:55:09,574 - INFO - dispatcher.py - 172 - Update id=588934153 is handled. Duration 6764 ms by bot id=7090078691
+2024-05-05 20:00:43,316 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-05 20:00:43,320 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-05 20:00:43,320 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-05 20:00:46,056 - INFO - dispatcher.py - 527 - Start polling
+2024-05-05 20:00:46,109 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-05 20:00:48,426 - INFO - dispatcher.py - 172 - Update id=588934154 is handled. Duration 993 ms by bot id=7090078691
+2024-05-05 20:00:49,821 - INFO - vk_api.py - 172 - Auth with login: +79886924592
+2024-05-05 20:00:49,822 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-05 20:00:49,944 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-05 20:00:49,945 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-05 20:00:50,541 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-05 20:00:50,620 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-05 20:00:51,019 - INFO - utils.py - 111 - Аккаунт Екатерина Фокина комментирует пост с id wall-118335380_44292
+2024-05-05 20:00:53,829 - INFO - utils.py - 115 - аккаунт Екатерина Фокина репостит запись wall-118335380_44292
+2024-05-05 20:00:56,123 - INFO - utils.py - 119 - аккаунт Екатерина Фокина вступает в группу поста wall-118335380_44292
+2024-05-05 20:00:56,196 - ERROR - utils.py - 132 - Ошибка при работе с постом wall-118335380_44292:
+[15] Access denied: you are already in this community
+2024-05-05 20:00:56,196 - INFO - utils.py - 136 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-118335380_44292----------
+2024-05-05 20:00:56,369 - INFO - dispatcher.py - 172 - Update id=588934155 is handled. Duration 6740 ms by bot id=7090078691
+2024-05-05 20:01:11,175 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-05 20:01:11,179 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-05 20:01:11,180 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-05 20:01:14,202 - INFO - dispatcher.py - 527 - Start polling
+2024-05-05 20:01:14,280 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-05 20:01:52,695 - INFO - dispatcher.py - 172 - Update id=588934156 is handled. Duration 1056 ms by bot id=7090078691
+2024-05-05 20:01:54,246 - INFO - vk_api.py - 172 - Auth with login: +79886924592
+2024-05-05 20:01:54,246 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-05 20:01:54,336 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-05 20:01:54,336 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-05 20:01:55,134 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-05 20:01:55,244 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-05 20:01:55,626 - INFO - utils.py - 111 - Аккаунт Екатерина Фокина комментирует пост с id wall-118335380_44292
+2024-05-05 20:01:58,447 - INFO - utils.py - 115 - аккаунт Екатерина Фокина репостит запись wall-118335380_44292
+2024-05-05 20:02:00,884 - INFO - utils.py - 119 - аккаунт Екатерина Фокина вступает в группу поста wall-118335380_44292
+2024-05-05 20:02:00,937 - ERROR - utils.py - 132 - Ошибка при работе с постом wall-118335380_44292:
+[15] Access denied: you are already in this community
+2024-05-05 20:02:00,937 - INFO - utils.py - 136 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-118335380_44292----------
+2024-05-05 20:02:01,062 - INFO - dispatcher.py - 172 - Update id=588934157 is handled. Duration 7036 ms by bot id=7090078691
+2024-05-05 20:02:41,430 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-05 20:02:41,433 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-05 20:02:41,434 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-05 20:02:41,627 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-05 20:02:49,542 - INFO - dispatcher.py - 527 - Start polling
+2024-05-05 20:02:49,597 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-05 20:03:11,921 - INFO - dispatcher.py - 172 - Update id=588934158 is handled. Duration 1189 ms by bot id=7090078691
+2024-05-05 20:03:24,823 - INFO - dispatcher.py - 172 - Update id=588934159 is handled. Duration 794 ms by bot id=7090078691
+2024-05-05 20:03:26,546 - INFO - vk_api.py - 172 - Auth with login: +79886924592
+2024-05-05 20:03:26,547 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-05 20:03:26,748 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-05 20:03:26,748 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-05 20:03:27,485 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-05 20:03:27,571 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-05 20:03:27,963 - INFO - utils.py - 111 - Аккаунт Екатерина Фокина комментирует пост с id wall-118335380_44292
+2024-05-05 20:03:30,937 - INFO - utils.py - 115 - аккаунт Екатерина Фокина репостит запись wall-118335380_44292
+2024-05-05 20:03:33,211 - INFO - utils.py - 119 - аккаунт Екатерина Фокина вступает в группу поста wall-118335380_44292
+2024-05-05 20:03:33,282 - INFO - dispatcher.py - 172 - Update id=588934160 is not handled. Duration 6859 ms by bot id=7090078691
+2024-05-05 20:03:33,282 - ERROR - dispatcher.py - 315 - Cause exception while process update id=588934160 by bot id=7090078691
+ApiError: [15] Access denied: you are already in this community
+Traceback (most recent call last):
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/handlers/post/post_routes.py", line 50, in repost_posts
+    await repost_all_new_posts_from_database()
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/services.py", line 33, in repost_all_new_posts_from_database
+    take_part_in_the_draw(vk_auth, account, posts)
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 120, in take_part_in_the_draw
+    join_to_groups(vk_auth, [group_id])
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 161, in join_to_groups
+    vk_auth.method(method='groups.join', values={
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/vk_api/vk_api/vk_api.py", line 738, in method
+    raise error
+vk_api.vk_api.exceptions.ApiError: [15] Access denied: you are already in this community
+2024-05-05 20:15:00,688 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-05 20:15:00,693 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-05 20:15:00,694 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-05 20:15:23,885 - INFO - dispatcher.py - 527 - Start polling
+2024-05-05 20:15:23,935 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-05 20:15:30,561 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-05 20:15:30,565 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-05 20:15:30,565 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-05 20:15:51,544 - INFO - dispatcher.py - 527 - Start polling
+2024-05-05 20:15:51,600 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-05 20:16:25,368 - INFO - dispatcher.py - 172 - Update id=588934161 is handled. Duration 368 ms by bot id=7090078691
+2024-05-05 20:16:26,193 - INFO - dispatcher.py - 172 - Update id=588934162 is handled. Duration 110 ms by bot id=7090078691
+2024-05-05 20:16:27,475 - INFO - dispatcher.py - 172 - Update id=588934163 is handled. Duration 743 ms by bot id=7090078691
+2024-05-05 20:16:30,594 - INFO - vk_api.py - 172 - Auth with login: +79886924592
+2024-05-05 20:16:30,595 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-05 20:16:30,683 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-05 20:16:30,683 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-05 20:16:31,405 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-05 20:16:31,501 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-05 20:16:31,910 - INFO - utils.py - 112 - Аккаунт Екатерина Фокина комментирует пост с id wall-118335380_44292
+2024-05-05 20:16:34,531 - INFO - utils.py - 116 - аккаунт Екатерина Фокина репостит запись wall-118335380_44292
+2024-05-05 20:16:36,801 - INFO - utils.py - 120 - аккаунт Екатерина Фокина вступает в группу поста wall-118335380_44292
+2024-05-05 20:16:36,866 - ERROR - utils.py - 134 - Ошибка при работе с постом wall-118335380_44292:
+__init__() missing 5 required positional arguments: 'vk', 'method', 'values', 'raw', and 'error'
+2024-05-05 20:16:36,867 - INFO - utils.py - 138 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-118335380_44292----------
+2024-05-05 20:16:37,077 - INFO - dispatcher.py - 172 - Update id=588934164 is handled. Duration 6626 ms by bot id=7090078691
+2024-05-05 20:17:38,895 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-05 20:17:38,899 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-05 20:17:38,900 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-05 20:18:05,916 - INFO - dispatcher.py - 527 - Start polling
+2024-05-05 20:18:05,990 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-05 20:18:33,964 - INFO - dispatcher.py - 172 - Update id=588934165 is handled. Duration 1058 ms by bot id=7090078691
+2024-05-05 20:18:35,519 - INFO - vk_api.py - 172 - Auth with login: +79886924592
+2024-05-05 20:18:35,519 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-05 20:18:35,651 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-05 20:18:35,651 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-05 20:18:36,173 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-05 20:18:36,273 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-05 20:18:36,695 - INFO - utils.py - 112 - Аккаунт Екатерина Фокина комментирует пост с id wall-118335380_44292
+2024-05-05 20:18:39,442 - INFO - utils.py - 116 - аккаунт Екатерина Фокина репостит запись wall-118335380_44292
+2024-05-05 20:18:41,845 - INFO - utils.py - 120 - аккаунт Екатерина Фокина вступает в группу поста wall-118335380_44292
+2024-05-05 20:18:41,896 - ERROR - utils.py - 134 - Ошибка при работе с постом wall-118335380_44292:
+__init__() missing 5 required positional arguments: 'vk', 'method', 'values', 'raw', and 'error'
+2024-05-05 20:18:41,896 - INFO - utils.py - 138 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-118335380_44292----------
+2024-05-05 20:18:42,023 - INFO - dispatcher.py - 172 - Update id=588934166 is handled. Duration 6620 ms by bot id=7090078691
+2024-05-05 20:21:12,198 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-05 20:21:12,201 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-05 20:21:12,201 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-05 20:21:19,914 - INFO - dispatcher.py - 527 - Start polling
+2024-05-05 20:21:19,962 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-05 20:21:40,928 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-05 20:21:40,931 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-05 20:21:40,931 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-05 20:21:43,448 - INFO - dispatcher.py - 527 - Start polling
+2024-05-05 20:21:43,500 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-05 20:21:44,982 - INFO - dispatcher.py - 172 - Update id=588934167 is handled. Duration 805 ms by bot id=7090078691
+2024-05-05 20:22:01,790 - INFO - dispatcher.py - 172 - Update id=588934168 is handled. Duration 889 ms by bot id=7090078691
+2024-05-05 20:22:03,014 - INFO - vk_api.py - 172 - Auth with login: +79886924592
+2024-05-05 20:22:03,015 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-05 20:22:03,102 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-05 20:22:03,103 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-05 20:22:03,660 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-05 20:22:03,754 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-05 20:22:04,150 - INFO - utils.py - 112 - Аккаунт Екатерина Фокина комментирует пост с id wall-118335380_44292
+2024-05-05 20:22:06,833 - INFO - utils.py - 116 - аккаунт Екатерина Фокина репостит запись wall-118335380_44292
+2024-05-05 20:22:09,133 - INFO - utils.py - 120 - аккаунт Екатерина Фокина вступает в группу поста wall-118335380_44292
+2024-05-05 20:22:09,173 - INFO - utils.py - 125 - аккаунт Екатерина Фокина вступает в группы из текста поста ['118335380']
+2024-05-05 20:23:09,579 - INFO - utils.py - 138 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-118335380_44292----------
+2024-05-05 20:23:09,930 - INFO - dispatcher.py - 172 - Update id=588934169 is handled. Duration 67235 ms by bot id=7090078691
+2024-05-05 21:32:41,150 - ERROR - dispatcher.py - 219 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2024-05-05 21:32:41,153 - WARNING - dispatcher.py - 221 - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7090078691)
+2024-05-05 22:32:15,716 - ERROR - dispatcher.py - 219 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2024-05-05 22:32:15,722 - WARNING - dispatcher.py - 221 - Sleep for 1.148930 seconds and try again... (tryings = 1, bot id = 7090078691)
+2024-05-05 22:32:27,098 - INFO - dispatcher.py - 233 - Connection established (tryings = 2, bot id = 7090078691)
+2024-05-06 00:46:10,794 - ERROR - dispatcher.py - 219 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2024-05-06 00:46:10,800 - WARNING - dispatcher.py - 221 - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7090078691)
+2024-05-06 01:03:12,818 - INFO - dispatcher.py - 233 - Connection established (tryings = 1, bot id = 7090078691)
+2024-05-06 01:03:15,572 - INFO - dispatcher.py - 172 - Update id=588934170 is handled. Duration 2747 ms by bot id=7090078691
+2024-05-06 03:32:31,138 - ERROR - dispatcher.py - 219 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2024-05-06 03:32:31,145 - WARNING - dispatcher.py - 221 - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7090078691)
+2024-05-06 03:32:42,380 - INFO - dispatcher.py - 233 - Connection established (tryings = 1, bot id = 7090078691)
+2024-05-06 07:00:58,670 - ERROR - dispatcher.py - 219 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2024-05-06 07:00:58,775 - WARNING - dispatcher.py - 221 - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7090078691)
+2024-05-06 09:11:36,158 - ERROR - dispatcher.py - 219 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2024-05-06 09:11:36,160 - WARNING - dispatcher.py - 221 - Sleep for 1.190498 seconds and try again... (tryings = 1, bot id = 7090078691)
+2024-05-06 12:06:16,620 - ERROR - dispatcher.py - 219 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2024-05-06 12:06:16,623 - WARNING - dispatcher.py - 221 - Sleep for 1.474407 seconds and try again... (tryings = 2, bot id = 7090078691)
+2024-05-06 14:18:41,901 - ERROR - dispatcher.py - 219 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2024-05-06 14:18:41,903 - WARNING - dispatcher.py - 221 - Sleep for 1.858265 seconds and try again... (tryings = 3, bot id = 7090078691)
+2024-05-06 09:30:36,553 - ERROR - dispatcher.py - 219 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2024-05-06 09:30:36,557 - WARNING - dispatcher.py - 221 - Sleep for 2.432573 seconds and try again... (tryings = 4, bot id = 7090078691)
+2024-05-06 09:30:49,300 - INFO - dispatcher.py - 233 - Connection established (tryings = 5, bot id = 7090078691)
