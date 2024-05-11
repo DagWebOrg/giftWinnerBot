@@ -27,7 +27,7 @@ async def get_new_posts_from_tracked_accounts(posts_count):
                                       account['last_scan_data'])
         posts += new_posts
 
-    update_scan_date_on_the_tracking_account(account)
+        update_scan_date_on_the_tracking_account(account)
     return(posts)
 
 

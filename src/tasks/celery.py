@@ -5,7 +5,7 @@ import settings
 from services.services import process_posts_with_prize_draws_from_database, add_posts_from_tracking_accounts_to_db
 
 
-redis_path = f'redis://{settings.CONFIG['redis']['url']}/0'
+redis_path = f"redis://{settings.CONFIG['redis']['url']}/0"
 
 app = Celery('reposting', backend=redis_path, broker=redis_path)
 app.conf.broker_connection_retry_on_startup = True
