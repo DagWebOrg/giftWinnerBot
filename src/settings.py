@@ -25,6 +25,6 @@ CONFIG = {
         }
     },
     'redis':{
-        'url': 'localhost:6479',
+        'url': os.getenv('REDIS_URL'),
     }
 }

@@ -4710,8 +4710,8 @@ Traceback (most recent call last):
   File "/Users/kamamber/Desktop/giftWinnerBot/src/handlers/post/post_routes.py", line 35, in post_find
     await add_all_new_posts_to_database()
   File "/Users/kamamber/Desktop/giftWinnerBot/src/services/services.py", line 18, in add_all_new_posts_to_database
-    posts = await get_posts_from_tracked_accounts()
-  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 22, in get_posts_from_tracked_accounts
+    posts = await get_new_posts_from_tracked_accounts()
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 22, in get_new_posts_from_tracked_accounts
     if is_a_new_post(post, account['last_scan_data']):
   File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 47, in is_a_new_post
     if last_scan_data.timestamp() < post['date']:
@@ -4762,8 +4762,8 @@ Traceback (most recent call last):
   File "/Users/kamamber/Desktop/giftWinnerBot/src/handlers/post/post_routes.py", line 35, in post_find
     await add_all_new_posts_to_database()
   File "/Users/kamamber/Desktop/giftWinnerBot/src/services/services.py", line 18, in add_all_new_posts_to_database
-    posts = await get_posts_from_tracked_accounts()
-  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 22, in get_posts_from_tracked_accounts
+    posts = await get_new_posts_from_tracked_accounts()
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 22, in get_new_posts_from_tracked_accounts
     if is_a_new_post(post, account['last_scan_data']):
   File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 46, in is_a_new_post
     if last_scan_data.timestamp() < post['date']:
@@ -4814,8 +4814,8 @@ Traceback (most recent call last):
   File "/Users/kamamber/Desktop/giftWinnerBot/src/handlers/post/post_routes.py", line 35, in post_find
     await add_all_new_posts_to_database()
   File "/Users/kamamber/Desktop/giftWinnerBot/src/services/services.py", line 18, in add_all_new_posts_to_database
-    posts = await get_posts_from_tracked_accounts()
-  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 23, in get_posts_from_tracked_accounts
+    posts = await get_new_posts_from_tracked_accounts()
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 23, in get_new_posts_from_tracked_accounts
     if is_a_new_post(post, account['last_scan_data']):
   File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 48, in is_a_new_post
     if last_scan_data.timestamp() < post['date']:
@@ -4869,8 +4869,8 @@ Traceback (most recent call last):
   File "/Users/kamamber/Desktop/giftWinnerBot/src/handlers/post/post_routes.py", line 35, in post_find
     await add_all_new_posts_to_database()
   File "/Users/kamamber/Desktop/giftWinnerBot/src/services/services.py", line 18, in add_all_new_posts_to_database
-    posts = await get_posts_from_tracked_accounts()
-  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 21, in get_posts_from_tracked_accounts
+    posts = await get_new_posts_from_tracked_accounts()
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 21, in get_new_posts_from_tracked_accounts
     new_posts = filter_new_posts(json_response['response'].get('items', []))
 TypeError: filter_new_posts() missing 1 required positional argument: 'last_scan_data'
 2024-05-04 23:19:59,955 - WARNING - dispatcher.py - 455 - Received SIGINT signal
@@ -4921,8 +4921,8 @@ Traceback (most recent call last):
   File "/Users/kamamber/Desktop/giftWinnerBot/src/handlers/post/post_routes.py", line 35, in post_find
     await add_all_new_posts_to_database()
   File "/Users/kamamber/Desktop/giftWinnerBot/src/services/services.py", line 18, in add_all_new_posts_to_database
-    posts = await get_posts_from_tracked_accounts()
-  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 21, in get_posts_from_tracked_accounts
+    posts = await get_new_posts_from_tracked_accounts()
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 21, in get_new_posts_from_tracked_accounts
     new_posts = filter_new_posts(json_response['response'].get('items', []))
 TypeError: filter_new_posts() missing 1 required positional argument: 'last_scan_data'
 2024-05-04 23:21:07,482 - WARNING - dispatcher.py - 455 - Received SIGINT signal
@@ -4971,8 +4971,8 @@ Traceback (most recent call last):
   File "/Users/kamamber/Desktop/giftWinnerBot/src/handlers/post/post_routes.py", line 35, in post_find
     await add_all_new_posts_to_database()
   File "/Users/kamamber/Desktop/giftWinnerBot/src/services/services.py", line 18, in add_all_new_posts_to_database
-    posts = await get_posts_from_tracked_accounts()
-  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 21, in get_posts_from_tracked_accounts
+    posts = await get_new_posts_from_tracked_accounts()
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 21, in get_new_posts_from_tracked_accounts
     new_posts = filter_new_posts(json_response['response'].get('items', []))
 TypeError: filter_new_posts() missing 1 required positional argument: 'last_scan_data'
 2024-05-04 23:21:42,638 - WARNING - dispatcher.py - 455 - Received SIGINT signal
@@ -5021,8 +5021,8 @@ Traceback (most recent call last):
   File "/Users/kamamber/Desktop/giftWinnerBot/src/handlers/post/post_routes.py", line 35, in post_find
     await add_all_new_posts_to_database()
   File "/Users/kamamber/Desktop/giftWinnerBot/src/services/services.py", line 18, in add_all_new_posts_to_database
-    posts = await get_posts_from_tracked_accounts()
-  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 22, in get_posts_from_tracked_accounts
+    posts = await get_new_posts_from_tracked_accounts()
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 22, in get_new_posts_from_tracked_accounts
     new_posts = filter_new_posts(json_response['response'].get('items', []))
 TypeError: filter_new_posts() missing 1 required positional argument: 'last_scan_data'
 2024-05-04 23:22:10,021 - WARNING - dispatcher.py - 455 - Received SIGINT signal
@@ -5071,8 +5071,8 @@ Traceback (most recent call last):
   File "/Users/kamamber/Desktop/giftWinnerBot/src/handlers/post/post_routes.py", line 35, in post_find
     await add_all_new_posts_to_database()
   File "/Users/kamamber/Desktop/giftWinnerBot/src/services/services.py", line 18, in add_all_new_posts_to_database
-    posts = await get_posts_from_tracked_accounts()
-  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 22, in get_posts_from_tracked_accounts
+    posts = await get_new_posts_from_tracked_accounts()
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 22, in get_new_posts_from_tracked_accounts
     new_posts = filter_new_posts(json_response['response'].get('items', []))
 TypeError: filter_new_posts() missing 1 required positional argument: 'last_scan_data'
 2024-05-04 23:22:31,588 - WARNING - dispatcher.py - 455 - Received SIGINT signal
@@ -5121,8 +5121,8 @@ Traceback (most recent call last):
   File "/Users/kamamber/Desktop/giftWinnerBot/src/handlers/post/post_routes.py", line 35, in post_find
     await add_all_new_posts_to_database()
   File "/Users/kamamber/Desktop/giftWinnerBot/src/services/services.py", line 18, in add_all_new_posts_to_database
-    posts = await get_posts_from_tracked_accounts()
-  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 21, in get_posts_from_tracked_accounts
+    posts = await get_new_posts_from_tracked_accounts()
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 21, in get_new_posts_from_tracked_accounts
     new_posts = filter_new_posts(json_response['response'].get('items', []))
 TypeError: filter_new_posts() missing 1 required positional argument: 'last_scan_data'
 2024-05-04 23:23:22,636 - WARNING - dispatcher.py - 455 - Received SIGINT signal
@@ -5171,8 +5171,8 @@ Traceback (most recent call last):
   File "/Users/kamamber/Desktop/giftWinnerBot/src/handlers/post/post_routes.py", line 35, in post_find
     await add_all_new_posts_to_database()
   File "/Users/kamamber/Desktop/giftWinnerBot/src/services/services.py", line 18, in add_all_new_posts_to_database
-    posts = await get_posts_from_tracked_accounts()
-  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 21, in get_posts_from_tracked_accounts
+    posts = await get_new_posts_from_tracked_accounts()
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 21, in get_new_posts_from_tracked_accounts
     account['last_scan_date'])
 KeyError: 'last_scan_date'
 2024-05-04 23:23:39,738 - WARNING - dispatcher.py - 455 - Received SIGINT signal
@@ -7554,8 +7554,8 @@ Traceback (most recent call last):
   File "/Users/kamamber/Desktop/giftWinnerBot/src/handlers/post/post_routes.py", line 35, in post_find
     await add_all_new_posts_to_database()
   File "/Users/kamamber/Desktop/giftWinnerBot/src/services/services.py", line 18, in add_all_new_posts_to_database
-    posts = await get_posts_from_tracked_accounts()
-  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 28, in get_posts_from_tracked_accounts
+    posts = await get_new_posts_from_tracked_accounts()
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 28, in get_new_posts_from_tracked_accounts
     posts = list(set(posts))
 TypeError: unhashable type: 'dict'
 2024-05-05 00:51:32,946 - WARNING - dispatcher.py - 455 - Received SIGINT signal
@@ -7610,8 +7610,8 @@ Traceback (most recent call last):
   File "/Users/kamamber/Desktop/giftWinnerBot/src/handlers/post/post_routes.py", line 35, in post_find
     await add_all_new_posts_to_database()
   File "/Users/kamamber/Desktop/giftWinnerBot/src/services/services.py", line 18, in add_all_new_posts_to_database
-    posts = await get_posts_from_tracked_accounts()
-  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 29, in get_posts_from_tracked_accounts
+    posts = await get_new_posts_from_tracked_accounts()
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 29, in get_new_posts_from_tracked_accounts
     posts = list(dict.fromkeys(posts))
 TypeError: unhashable type: 'dict'
 2024-05-05 00:53:59,514 - WARNING - dispatcher.py - 455 - Received SIGINT signal
@@ -7660,8 +7660,8 @@ Traceback (most recent call last):
   File "/Users/kamamber/Desktop/giftWinnerBot/src/handlers/post/post_routes.py", line 35, in post_find
     await add_all_new_posts_to_database()
   File "/Users/kamamber/Desktop/giftWinnerBot/src/services/services.py", line 18, in add_all_new_posts_to_database
-    posts = await get_posts_from_tracked_accounts()
-  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 29, in get_posts_from_tracked_accounts
+    posts = await get_new_posts_from_tracked_accounts()
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 29, in get_new_posts_from_tracked_accounts
     posts = list(dict.fromkeys(posts))
 TypeError: unhashable type: 'dict'
 2024-05-05 00:55:42,464 - WARNING - dispatcher.py - 455 - Received SIGINT signal
@@ -7875,8 +7875,8 @@ Traceback (most recent call last):
   File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
     return await wrapped()
   File "/Users/kamamber/Desktop/giftWinnerBot/src/handlers/post/post_routes.py", line 50, in repost_posts
-    await repost_all_new_posts_from_database()
-  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/services.py", line 33, in repost_all_new_posts_from_database
+    await process_posts_with_prize_draws_from_database()
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/services/services.py", line 33, in process_posts_with_prize_draws_from_database
     take_part_in_the_draw(vk_auth, account, posts)
   File "/Users/kamamber/Desktop/giftWinnerBot/src/services/utils.py", line 120, in take_part_in_the_draw
     join_to_groups(vk_auth, [group_id])

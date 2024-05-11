@@ -10,7 +10,7 @@ from .http_requests.api import get_posts_from_api
 
 
 
-async def get_posts_from_tracked_accounts(posts_count):
+async def get_new_posts_from_tracked_accounts(posts_count):
     tracking_accounts = CRUD.get_tracking_accounts()
     posts = []
 
@@ -31,7 +31,7 @@ async def get_posts_from_tracked_accounts(posts_count):
     return(posts)
 
 
-def get_validated_posts(posts):
+def validate_posts(posts):
     validated_posts = []
     for post in posts:
         if post_is_validated(post):
@@ -120,13 +120,12 @@ def take_part_in_the_draw(vk_auth, account, posts):
                 LOGGER.info(f"аккаунт {account['alias']} вступает в группу поста {full_post_id}")
                 join_to_groups(vk_auth, [group_id])
                     
-
+                time.sleep(2)
                 groups_id_from_text = return_all_groups_id_from_text(post['content'])
                 LOGGER.info(f"аккаунт {account['alias']} вступает в группы из текста поста {groups_id_from_text}")
                 join_to_groups(vk_auth, groups_id_from_text)
 
 
-                
                 time.sleep(60)
 
 

@@ -6,7 +6,7 @@ from states.post import PostState
 
 from utils.permissions import is_authenticated
 from utils.keyboards import KeyboardStorage as kb
-from services.services import add_all_new_posts_to_database, repost_all_new_posts_from_database
+from services.services import add_posts_from_tracking_accounts_to_db, process_posts_with_prize_draws_from_database
 
 
 from database.crud import CRUD
@@ -32,7 +32,7 @@ async def post_find(message: types.Message, state: FSMContext):
     keyboard = types.ReplyKeyboardRemove()
     await message.answer('🔎 Идет поиск...', reply_markup=keyboard)
 
-    await add_all_new_posts_to_database()
+    await add_posts_from_tracking_accounts_to_db()
 
     keyboard = kb.post_list()
     await state.set_state(KeyboardState.post_list)
@@ -47,7 +47,7 @@ async def repost_posts(message: types.Message, state: FSMContext):
     keyboard = types.ReplyKeyboardRemove()
     await message.answer('🔎 Идет репост...', reply_markup=keyboard)
 
-    await repost_all_new_posts_from_database()
+    await process_posts_with_prize_draws_from_database()
 
     keyboard = kb.post_list()
     await state.set_state(KeyboardState.post_list)

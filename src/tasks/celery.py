@@ -2,7 +2,7 @@ from celery import Celery
 import asyncio
 
 import settings
-from services.services import repost_all_new_posts_from_database, add_all_new_posts_to_database
+from services.services import process_posts_with_prize_draws_from_database, add_posts_from_tracking_accounts_to_db
 
 
 redis_path = f'redis://{settings.CONFIG['redis']['url']}/0'
@@ -24,5 +24,5 @@ def setup_periodic_tasks(sender, **kwargs):
 
 @app.task
 def repost():
-    asyncio.run(add_all_new_posts_to_database())
-    return asyncio.run(repost_all_new_posts_from_database())
+    asyncio.run(add_posts_from_tracking_accounts_to_db())
+    return asyncio.run(process_posts_with_prize_draws_from_database())
