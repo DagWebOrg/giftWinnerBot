@@ -7977,3 +7977,979 @@ __init__() missing 5 required positional arguments: 'vk', 'method', 'values', 'r
 2024-05-06 09:30:36,553 - ERROR - dispatcher.py - 219 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
 2024-05-06 09:30:36,557 - WARNING - dispatcher.py - 221 - Sleep for 2.432573 seconds and try again... (tryings = 4, bot id = 7090078691)
 2024-05-06 09:30:49,300 - INFO - dispatcher.py - 233 - Connection established (tryings = 5, bot id = 7090078691)
+2024-05-18 16:35:21,447 - INFO - dispatcher.py - 527 - Start polling
+2024-05-18 16:35:21,496 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 16:35:32,004 - ERROR - permissions.py - 14 - Пользователь с id 723054122 не авторизован!
+2024-05-18 16:35:32,309 - INFO - dispatcher.py - 172 - Update id=588934192 is handled. Duration 311 ms by bot id=7090078691
+2024-05-18 16:35:38,695 - INFO - dispatcher.py - 172 - Update id=588934193 is handled. Duration 189 ms by bot id=7090078691
+2024-05-18 16:35:40,796 - INFO - dispatcher.py - 172 - Update id=588934194 is handled. Duration 324 ms by bot id=7090078691
+2024-05-18 16:35:41,897 - INFO - dispatcher.py - 172 - Update id=588934195 is handled. Duration 97 ms by bot id=7090078691
+2024-05-18 16:35:46,422 - INFO - dispatcher.py - 172 - Update id=588934196 is handled. Duration 82 ms by bot id=7090078691
+2024-05-18 16:35:51,512 - INFO - dispatcher.py - 172 - Update id=588934197 is handled. Duration 73 ms by bot id=7090078691
+2024-05-18 16:35:55,307 - INFO - vk_api.py - 172 - Auth with login: 89886924592
+2024-05-18 16:35:55,307 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 16:35:55,307 - INFO - vk_api.py - 434 - No remixsid
+2024-05-18 16:35:55,307 - INFO - vk_api.py - 202 - remixsid from config is not valid: None
+2024-05-18 16:35:55,307 - INFO - vk_api.py - 242 - Logging in...
+2024-05-18 16:35:56,310 - INFO - vk_api.py - 323 - Got remixsid
+2024-05-18 16:35:56,315 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 16:35:56,315 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 16:35:56,315 - INFO - vk_api.py - 209 - access_token from config is not valid: None
+2024-05-18 16:35:56,551 - INFO - vk_api.py - 543 - Got access_token
+2024-05-18 16:35:56,551 - INFO - utils.py - 231 - <vk_api.vk_api.vk_api.VkApi object at 0x1049c6c70>
+2024-05-18 16:35:56,551 - INFO - dispatcher.py - 172 - Update id=588934198 is not handled. Duration 1307 ms by bot id=7090078691
+2024-05-18 16:35:56,552 - ERROR - dispatcher.py - 315 - Cause exception while process update id=588934198 by bot id=7090078691
+TypeError: create_work_account() missing 1 required positional argument: 'account_id'
+Traceback (most recent call last):
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/handlers/work_account/work_account_routes.py", line 72, in work_account_password_entry
+    CRUD.create_work_account(**data)
+TypeError: create_work_account() missing 1 required positional argument: 'account_id'
+2024-05-18 16:37:29,750 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 16:37:29,753 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 16:37:29,753 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-18 16:37:32,589 - INFO - dispatcher.py - 527 - Start polling
+2024-05-18 16:37:32,639 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 16:37:35,143 - INFO - dispatcher.py - 172 - Update id=588934199 is handled. Duration 319 ms by bot id=7090078691
+2024-05-18 16:37:36,278 - INFO - dispatcher.py - 172 - Update id=588934200 is handled. Duration 99 ms by bot id=7090078691
+2024-05-18 16:37:37,497 - INFO - dispatcher.py - 172 - Update id=588934201 is handled. Duration 6 ms by bot id=7090078691
+2024-05-18 16:37:42,163 - INFO - dispatcher.py - 172 - Update id=588934202 is handled. Duration 210 ms by bot id=7090078691
+2024-05-18 16:37:42,880 - INFO - dispatcher.py - 172 - Update id=588934203 is handled. Duration 117 ms by bot id=7090078691
+2024-05-18 16:37:48,263 - INFO - dispatcher.py - 172 - Update id=588934204 is handled. Duration 98 ms by bot id=7090078691
+2024-05-18 16:37:54,548 - INFO - vk_api.py - 172 - Auth with login: 89886924592
+2024-05-18 16:37:54,549 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 16:37:54,792 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 16:37:54,792 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 16:37:55,548 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 16:37:55,676 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 16:37:55,677 - INFO - utils.py - 231 - {'login': '89886924592', 'password': 'Pravilo10xx', 'token': {'access_token': 'vk1.a.L-uF51LeMc98wk-ydmmL8ZfrhjgSUqkcG3j0xH1Jskwj-gf7mSIPy8C3R8hcTA3jJVbOWVQYfK6sawS3ROiWZa-uWYgrA3p1QQ4lkaaigjAMS4Es2eBdixqJr5KqG2Mw-vcRK7tMtzZ4K4tD5ohD29XWYywa1f2QwS1jTwZLITGh4PyH9DcDgsTFcwpfNdbxVqs_U5nbx8u937U3dfdP7g', 'expires_in': '86400', 'user_id': '857805532'}, 'api_version': '5.92', 'app_id': 6287487, 'scope': 140492255, 'client_secret': 'QbYic1K3lEV5kTGiqlq2', 'storage': <vk_api.jconfig.jconfig.Config object at 0x10cb0af40>, 'http': <requests.sessions.Session object at 0x1076bb910>, 'last_request': 1716039475.676814, 'error_handlers': {17: <bound method VkApi.need_validation_handler of <vk_api.vk_api.vk_api.VkApi object at 0x10784e6a0>>, 14: <bound method VkApi.captcha_handler of <vk_api.vk_api.vk_api.VkApi object at 0x10784e6a0>>, 6: <bound method VkApi.too_many_rps_handler of <vk_api.vk_api.vk_api.VkApi object at 0x10784e6a0>>, -2: <bound method VkApi.auth_handler of <vk_api.vk_api.vk_api.VkApi object at 0x10784e6a0>>}, 'lock': <unlocked _thread.lock object at 0x107e49d20>, 'logger': <Logger vk_api (INFO)>}
+2024-05-18 16:37:55,678 - INFO - dispatcher.py - 172 - Update id=588934205 is not handled. Duration 1834 ms by bot id=7090078691
+2024-05-18 16:37:55,678 - ERROR - dispatcher.py - 315 - Cause exception while process update id=588934205 by bot id=7090078691
+TypeError: create_work_account() missing 1 required positional argument: 'account_id'
+Traceback (most recent call last):
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/handlers/work_account/work_account_routes.py", line 72, in work_account_password_entry
+    CRUD.create_work_account(**data)
+TypeError: create_work_account() missing 1 required positional argument: 'account_id'
+2024-05-18 16:40:20,888 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 16:40:20,891 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 16:40:20,892 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-18 16:40:24,118 - INFO - dispatcher.py - 527 - Start polling
+2024-05-18 16:40:24,171 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 16:40:27,212 - INFO - dispatcher.py - 172 - Update id=588934206 is handled. Duration 792 ms by bot id=7090078691
+2024-05-18 16:40:27,926 - INFO - dispatcher.py - 172 - Update id=588934207 is handled. Duration 113 ms by bot id=7090078691
+2024-05-18 16:40:29,307 - INFO - dispatcher.py - 172 - Update id=588934208 is handled. Duration 8 ms by bot id=7090078691
+2024-05-18 16:40:32,466 - INFO - dispatcher.py - 172 - Update id=588934209 is handled. Duration 168 ms by bot id=7090078691
+2024-05-18 16:40:33,647 - INFO - dispatcher.py - 172 - Update id=588934210 is handled. Duration 613 ms by bot id=7090078691
+2024-05-18 16:40:41,330 - INFO - dispatcher.py - 172 - Update id=588934211 is handled. Duration 115 ms by bot id=7090078691
+2024-05-18 16:41:02,415 - INFO - vk_api.py - 172 - Auth with login: 89886924592
+2024-05-18 16:41:02,415 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 16:41:02,514 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 16:41:02,514 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 16:41:03,481 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 16:41:03,589 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 16:41:03,589 - ERROR - utils.py - 235 - Ошибка при записи рабочего аккаунта в бд. Не удалось залогиниться с помощью vk_api. 89886924592 --- 
+'VkApi' object is not subscriptable
+2024-05-18 16:41:03,590 - INFO - dispatcher.py - 172 - Update id=588934212 is not handled. Duration 1481 ms by bot id=7090078691
+2024-05-18 16:41:03,590 - ERROR - dispatcher.py - 315 - Cause exception while process update id=588934212 by bot id=7090078691
+TypeError: create_work_account() missing 1 required positional argument: 'account_id'
+Traceback (most recent call last):
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/handlers/work_account/work_account_routes.py", line 72, in work_account_password_entry
+    CRUD.create_work_account(**data)
+TypeError: create_work_account() missing 1 required positional argument: 'account_id'
+2024-05-18 16:41:57,494 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 16:41:57,496 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 16:41:57,497 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-18 16:42:03,888 - INFO - dispatcher.py - 527 - Start polling
+2024-05-18 16:42:03,958 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 16:42:06,162 - INFO - dispatcher.py - 172 - Update id=588934213 is handled. Duration 377 ms by bot id=7090078691
+2024-05-18 16:42:07,284 - INFO - dispatcher.py - 172 - Update id=588934214 is handled. Duration 214 ms by bot id=7090078691
+2024-05-18 16:42:09,792 - INFO - dispatcher.py - 172 - Update id=588934215 is handled. Duration 124 ms by bot id=7090078691
+2024-05-18 16:42:37,296 - INFO - dispatcher.py - 172 - Update id=588934216 is handled. Duration 512 ms by bot id=7090078691
+2024-05-18 16:42:43,059 - INFO - dispatcher.py - 172 - Update id=588934217 is handled. Duration 87 ms by bot id=7090078691
+2024-05-18 16:42:46,377 - INFO - vk_api.py - 172 - Auth with login: 89886924592
+2024-05-18 16:42:46,378 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 16:42:46,505 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 16:42:46,505 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 16:42:47,195 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 16:42:47,289 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 16:42:47,289 - ERROR - utils.py - 235 - Ошибка при записи рабочего аккаунта в бд. Не удалось залогиниться с помощью vk_api. 89886924592 --- 
+'access_token'
+2024-05-18 16:42:47,290 - INFO - dispatcher.py - 172 - Update id=588934218 is not handled. Duration 1050 ms by bot id=7090078691
+2024-05-18 16:42:47,290 - ERROR - dispatcher.py - 315 - Cause exception while process update id=588934218 by bot id=7090078691
+TypeError: create_work_account() missing 1 required positional argument: 'account_id'
+Traceback (most recent call last):
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/handlers/work_account/work_account_routes.py", line 72, in work_account_password_entry
+    CRUD.create_work_account(**data)
+TypeError: create_work_account() missing 1 required positional argument: 'account_id'
+2024-05-18 16:43:48,195 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 16:43:48,197 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 16:43:48,198 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-18 16:43:51,023 - INFO - dispatcher.py - 527 - Start polling
+2024-05-18 16:43:51,106 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 16:43:52,724 - INFO - dispatcher.py - 172 - Update id=588934219 is handled. Duration 255 ms by bot id=7090078691
+2024-05-18 16:43:53,830 - INFO - dispatcher.py - 172 - Update id=588934220 is handled. Duration 126 ms by bot id=7090078691
+2024-05-18 16:43:55,345 - INFO - dispatcher.py - 172 - Update id=588934221 is handled. Duration 72 ms by bot id=7090078691
+2024-05-18 16:43:56,766 - INFO - dispatcher.py - 172 - Update id=588934222 is handled. Duration 77 ms by bot id=7090078691
+2024-05-18 16:44:01,090 - INFO - dispatcher.py - 172 - Update id=588934223 is handled. Duration 89 ms by bot id=7090078691
+2024-05-18 16:44:05,903 - INFO - vk_api.py - 172 - Auth with login: 89886924592
+2024-05-18 16:44:05,904 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 16:44:05,996 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 16:44:05,996 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 16:44:06,983 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 16:44:07,092 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 16:44:07,092 - INFO - utils.py - 232 - 857805532, <class 'str'>
+2024-05-18 16:44:07,093 - INFO - dispatcher.py - 172 - Update id=588934224 is not handled. Duration 1252 ms by bot id=7090078691
+2024-05-18 16:44:07,093 - ERROR - dispatcher.py - 315 - Cause exception while process update id=588934224 by bot id=7090078691
+TypeError: create_work_account() missing 1 required positional argument: 'account_id'
+Traceback (most recent call last):
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/handlers/work_account/work_account_routes.py", line 72, in work_account_password_entry
+    CRUD.create_work_account(**data)
+TypeError: create_work_account() missing 1 required positional argument: 'account_id'
+2024-05-18 16:52:42,398 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 16:52:42,403 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 16:52:42,403 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-18 16:52:45,532 - INFO - dispatcher.py - 527 - Start polling
+2024-05-18 16:52:45,612 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 16:52:47,541 - INFO - dispatcher.py - 172 - Update id=588934225 is handled. Duration 328 ms by bot id=7090078691
+2024-05-18 16:52:48,466 - INFO - dispatcher.py - 172 - Update id=588934226 is handled. Duration 116 ms by bot id=7090078691
+2024-05-18 16:55:01,758 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 16:55:01,761 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 16:55:01,761 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-18 16:55:23,718 - INFO - dispatcher.py - 527 - Start polling
+2024-05-18 16:55:23,785 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 16:55:27,440 - ERROR - permissions.py - 14 - Пользователь с id 723054122 не авторизован!
+2024-05-18 16:55:27,798 - INFO - dispatcher.py - 172 - Update id=588934227 is handled. Duration 361 ms by bot id=7090078691
+2024-05-18 16:55:31,593 - INFO - dispatcher.py - 172 - Update id=588934228 is handled. Duration 185 ms by bot id=7090078691
+2024-05-18 16:55:32,943 - INFO - dispatcher.py - 172 - Update id=588934229 is handled. Duration 237 ms by bot id=7090078691
+2024-05-18 16:55:34,462 - INFO - dispatcher.py - 172 - Update id=588934230 is handled. Duration 225 ms by bot id=7090078691
+2024-05-18 16:55:37,474 - INFO - dispatcher.py - 172 - Update id=588934231 is handled. Duration 193 ms by bot id=7090078691
+2024-05-18 16:55:46,683 - INFO - dispatcher.py - 172 - Update id=588934232 is handled. Duration 147 ms by bot id=7090078691
+2024-05-18 16:55:49,749 - INFO - vk_api.py - 172 - Auth with login: 89887924592
+2024-05-18 16:55:49,749 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 16:55:49,750 - INFO - vk_api.py - 434 - No remixsid
+2024-05-18 16:55:49,750 - INFO - vk_api.py - 202 - remixsid from config is not valid: None
+2024-05-18 16:55:49,750 - INFO - vk_api.py - 242 - Logging in...
+2024-05-18 16:55:50,241 - INFO - vk_api.py - 172 - Auth with login: 89887924592
+2024-05-18 16:55:50,241 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 16:55:50,241 - INFO - vk_api.py - 434 - No remixsid
+2024-05-18 16:55:50,241 - INFO - vk_api.py - 202 - remixsid from config is not valid: None
+2024-05-18 16:55:50,241 - INFO - vk_api.py - 242 - Logging in...
+2024-05-18 16:55:50,674 - ERROR - utils.py - 234 - Ошибка при записи рабочего аккаунта в бд. Не удалось залогиниться с помощью vk_api. 89887924592 --- 
+Bad password
+2024-05-18 16:55:50,761 - INFO - dispatcher.py - 172 - Update id=588934233 is handled. Duration 1077 ms by bot id=7090078691
+2024-05-18 16:56:41,882 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 16:56:41,887 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 16:56:41,887 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-18 16:56:44,649 - INFO - dispatcher.py - 527 - Start polling
+2024-05-18 16:56:44,706 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 16:56:47,519 - INFO - dispatcher.py - 172 - Update id=588934234 is handled. Duration 337 ms by bot id=7090078691
+2024-05-18 16:56:49,143 - INFO - dispatcher.py - 172 - Update id=588934235 is handled. Duration 271 ms by bot id=7090078691
+2024-05-18 16:56:56,089 - INFO - dispatcher.py - 172 - Update id=588934236 is handled. Duration 219 ms by bot id=7090078691
+2024-05-18 16:57:00,710 - INFO - dispatcher.py - 172 - Update id=588934237 is handled. Duration 92 ms by bot id=7090078691
+2024-05-18 16:57:04,272 - INFO - vk_api.py - 172 - Auth with login: 89886924592
+2024-05-18 16:57:04,272 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 16:57:04,380 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 16:57:04,380 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 16:57:05,270 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 16:57:05,385 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 16:57:05,575 - INFO - dispatcher.py - 172 - Update id=588934238 is handled. Duration 1372 ms by bot id=7090078691
+2024-05-18 17:28:03,871 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 17:28:03,877 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 17:28:03,878 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-18 17:30:13,507 - INFO - dispatcher.py - 527 - Start polling
+2024-05-18 17:30:13,559 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 17:31:10,337 - INFO - dispatcher.py - 172 - Update id=588934239 is handled. Duration 412 ms by bot id=7090078691
+2024-05-18 17:31:14,416 - INFO - dispatcher.py - 172 - Update id=588934240 is handled. Duration 122 ms by bot id=7090078691
+2024-05-18 17:31:15,822 - INFO - dispatcher.py - 172 - Update id=588934241 is handled. Duration 147 ms by bot id=7090078691
+2024-05-18 17:31:21,568 - INFO - dispatcher.py - 172 - Update id=588934242 is handled. Duration 89 ms by bot id=7090078691
+2024-05-18 17:31:24,494 - INFO - dispatcher.py - 172 - Update id=588934243 is handled. Duration 132 ms by bot id=7090078691
+2024-05-18 17:31:27,104 - INFO - dispatcher.py - 172 - Update id=588934244 is handled. Duration 105 ms by bot id=7090078691
+2024-05-18 17:32:18,635 - INFO - dispatcher.py - 172 - Update id=588934245 is handled. Duration 294 ms by bot id=7090078691
+2024-05-18 17:32:19,522 - INFO - dispatcher.py - 172 - Update id=588934246 is handled. Duration 217 ms by bot id=7090078691
+2024-05-18 17:32:27,004 - INFO - dispatcher.py - 172 - Update id=588934247 is handled. Duration 8 ms by bot id=7090078691
+2024-05-18 17:32:35,275 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 17:32:35,277 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 17:32:35,278 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-18 17:32:38,447 - INFO - dispatcher.py - 527 - Start polling
+2024-05-18 17:32:38,505 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 17:33:14,007 - INFO - dispatcher.py - 172 - Update id=588934248 is handled. Duration 327 ms by bot id=7090078691
+2024-05-18 17:33:15,405 - INFO - dispatcher.py - 172 - Update id=588934249 is handled. Duration 121 ms by bot id=7090078691
+2024-05-18 17:33:16,790 - INFO - dispatcher.py - 172 - Update id=588934250 is handled. Duration 284 ms by bot id=7090078691
+2024-05-18 17:33:44,362 - INFO - dispatcher.py - 172 - Update id=588934251 is handled. Duration 336 ms by bot id=7090078691
+2024-05-18 17:33:45,329 - INFO - dispatcher.py - 172 - Update id=588934252 is handled. Duration 85 ms by bot id=7090078691
+2024-05-18 17:33:46,343 - INFO - dispatcher.py - 172 - Update id=588934253 is handled. Duration 122 ms by bot id=7090078691
+2024-05-18 17:33:48,171 - INFO - dispatcher.py - 172 - Update id=588934254 is handled. Duration 876 ms by bot id=7090078691
+2024-05-18 17:33:52,280 - INFO - vk_api.py - 172 - Auth with login: 89886924592
+2024-05-18 17:33:52,281 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 17:33:52,416 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 17:33:52,416 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 17:33:53,425 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 17:33:53,529 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 17:33:53,916 - INFO - utils.py - 130 - Аккаунт q пропустил ранее обработанный пост с id wall-132994666_36536
+2024-05-18 17:33:53,916 - INFO - utils.py - 162 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-132994666_36536----------
+2024-05-18 17:33:54,085 - INFO - dispatcher.py - 172 - Update id=588934255 is handled. Duration 1939 ms by bot id=7090078691
+2024-05-18 17:35:08,426 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 17:35:08,430 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 17:35:08,430 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-18 17:36:06,840 - INFO - dispatcher.py - 527 - Start polling
+2024-05-18 17:36:06,912 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 17:36:08,911 - INFO - dispatcher.py - 172 - Update id=588934257 is handled. Duration 1173 ms by bot id=7090078691
+2024-05-18 17:36:10,847 - INFO - vk_api.py - 172 - Auth with login: 89886924592
+2024-05-18 17:36:10,847 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 17:36:10,925 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 17:36:10,925 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 17:36:14,848 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 17:36:14,924 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 17:36:15,334 - INFO - utils.py - 137 - Аккаунт q комментирует пост с id wall-205827347_8193
+2024-05-18 17:36:31,054 - INFO - utils.py - 141 - аккаунт q репостит запись wall-205827347_8193
+2024-05-18 17:36:33,407 - INFO - utils.py - 145 - аккаунт q вступает в группу поста wall-205827347_8193
+2024-05-18 17:36:35,825 - INFO - utils.py - 150 - аккаунт q вступает в группы из текста поста []
+2024-05-18 17:37:35,830 - INFO - utils.py - 162 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-205827347_8193----------
+2024-05-18 17:37:35,915 - ERROR - dispatcher.py - 219 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2024-05-18 17:37:35,915 - WARNING - dispatcher.py - 221 - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7090078691)
+2024-05-18 17:37:36,304 - INFO - dispatcher.py - 172 - Update id=588934258 is handled. Duration 85583 ms by bot id=7090078691
+2024-05-18 17:37:47,122 - INFO - dispatcher.py - 233 - Connection established (tryings = 1, bot id = 7090078691)
+2024-05-18 17:54:55,856 - INFO - dispatcher.py - 172 - Update id=588934259 is handled. Duration 278 ms by bot id=7090078691
+2024-05-18 17:54:57,086 - INFO - dispatcher.py - 172 - Update id=588934260 is handled. Duration 366 ms by bot id=7090078691
+2024-05-18 17:54:59,749 - INFO - dispatcher.py - 172 - Update id=588934261 is handled. Duration 85 ms by bot id=7090078691
+2024-05-18 17:55:07,388 - INFO - dispatcher.py - 172 - Update id=588934262 is handled. Duration 285 ms by bot id=7090078691
+2024-05-18 17:55:09,021 - INFO - dispatcher.py - 172 - Update id=588934263 is handled. Duration 75 ms by bot id=7090078691
+2024-05-18 17:55:13,962 - INFO - vk_api.py - 172 - Auth with login: +79939760355
+2024-05-18 17:55:13,962 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 17:55:13,962 - INFO - vk_api.py - 434 - No remixsid
+2024-05-18 17:55:13,962 - INFO - vk_api.py - 202 - remixsid from config is not valid: None
+2024-05-18 17:55:13,963 - INFO - vk_api.py - 242 - Logging in...
+2024-05-18 17:55:14,533 - INFO - vk_api.py - 323 - Got remixsid
+2024-05-18 17:55:14,538 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 17:55:14,538 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 17:55:14,538 - INFO - vk_api.py - 209 - access_token from config is not valid: None
+2024-05-18 17:55:14,764 - INFO - vk_api.py - 543 - Got access_token
+2024-05-18 17:55:14,902 - INFO - dispatcher.py - 172 - Update id=588934264 is handled. Duration 1024 ms by bot id=7090078691
+2024-05-18 17:55:17,901 - INFO - dispatcher.py - 172 - Update id=588934265 is handled. Duration 113 ms by bot id=7090078691
+2024-05-18 17:55:23,901 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 17:55:23,905 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 17:55:23,905 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-18 17:55:26,812 - INFO - dispatcher.py - 527 - Start polling
+2024-05-18 17:55:26,864 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 17:55:30,629 - INFO - dispatcher.py - 172 - Update id=588934266 is handled. Duration 276 ms by bot id=7090078691
+2024-05-18 17:55:32,932 - INFO - dispatcher.py - 172 - Update id=588934267 is handled. Duration 882 ms by bot id=7090078691
+2024-05-18 17:55:34,979 - INFO - vk_api.py - 172 - Auth with login: 89886924592
+2024-05-18 17:55:34,980 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 17:55:35,157 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 17:55:35,158 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 17:55:38,008 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 17:55:38,102 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 17:55:38,529 - INFO - utils.py - 137 - Аккаунт q комментирует пост с id wall-225464110_65
+2024-05-18 17:55:54,684 - INFO - utils.py - 141 - аккаунт q репостит запись wall-225464110_65
+2024-05-18 17:55:57,095 - INFO - utils.py - 145 - аккаунт q вступает в группу поста wall-225464110_65
+2024-05-18 17:55:57,141 - INFO - utils.py - 233 - Группа с id -225464110 была пропущена. Аккаунт уже в числе ее участников.
+2024-05-18 17:55:59,144 - INFO - utils.py - 150 - аккаунт q вступает в группы из текста поста []
+2024-05-18 17:56:59,150 - INFO - utils.py - 162 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-225464110_65----------
+2024-05-18 17:56:59,155 - INFO - vk_api.py - 172 - Auth with login: +79939760355
+2024-05-18 17:56:59,156 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 17:56:59,276 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 17:56:59,276 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 17:57:00,224 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 17:57:00,434 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 17:57:00,844 - INFO - utils.py - 137 - Аккаунт Ирина Березкина комментирует пост с id wall-225464110_65
+2024-05-18 17:57:16,517 - INFO - utils.py - 141 - аккаунт Ирина Березкина репостит запись wall-225464110_65
+2024-05-18 17:57:19,030 - INFO - utils.py - 145 - аккаунт Ирина Березкина вступает в группу поста wall-225464110_65
+2024-05-18 17:57:19,082 - INFO - utils.py - 233 - Группа с id -225464110 была пропущена. Аккаунт уже в числе ее участников.
+2024-05-18 17:57:21,098 - INFO - utils.py - 150 - аккаунт Ирина Березкина вступает в группы из текста поста []
+2024-05-18 17:58:21,102 - INFO - utils.py - 162 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-225464110_65----------
+2024-05-18 17:58:21,151 - ERROR - dispatcher.py - 219 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2024-05-18 17:58:21,151 - WARNING - dispatcher.py - 221 - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7090078691)
+2024-05-18 17:58:21,472 - INFO - dispatcher.py - 172 - Update id=588934268 is handled. Duration 166627 ms by bot id=7090078691
+2024-05-18 17:58:32,333 - INFO - dispatcher.py - 233 - Connection established (tryings = 1, bot id = 7090078691)
+2024-05-18 18:02:01,542 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 18:02:01,545 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 18:02:01,546 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-18 18:02:04,890 - INFO - dispatcher.py - 527 - Start polling
+2024-05-18 18:02:04,961 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 18:02:40,304 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 18:02:40,306 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 18:02:40,306 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-18 18:02:40,504 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 18:02:43,944 - INFO - dispatcher.py - 527 - Start polling
+2024-05-18 18:02:44,001 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 18:03:24,152 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 18:03:24,154 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 18:03:24,154 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-18 18:03:27,117 - INFO - dispatcher.py - 527 - Start polling
+2024-05-18 18:03:27,168 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 18:04:02,131 - INFO - vk_api.py - 172 - Auth with login: 89886924592
+2024-05-18 18:04:02,132 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:04:02,210 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:04:02,210 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:04:03,069 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:04:03,182 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:04:03,183 - INFO - vk_api.py - 172 - Auth with login: +79939760355
+2024-05-18 18:04:03,184 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:04:03,272 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:04:03,272 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:04:04,111 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:04:04,225 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:04:04,486 - INFO - dispatcher.py - 172 - Update id=588934269 is handled. Duration 2805 ms by bot id=7090078691
+2024-05-18 18:04:06,838 - INFO - dispatcher.py - 172 - Update id=588934270 is handled. Duration 795 ms by bot id=7090078691
+2024-05-18 18:04:09,007 - INFO - vk_api.py - 172 - Auth with login: 89886924592
+2024-05-18 18:04:09,007 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:04:09,096 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:04:09,096 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:04:09,836 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:04:09,992 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:04:10,382 - INFO - utils.py - 134 - Аккаунт q комментирует пост, в котором нужно отметить друзей с id wall-225464110_65
+2024-05-18 18:04:10,406 - ERROR - utils.py - 158 - Ошибка при работе с постом wall-225464110_65:
+'account_id'
+2024-05-18 18:04:10,406 - INFO - utils.py - 162 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-225464110_65----------
+2024-05-18 18:04:10,407 - INFO - vk_api.py - 172 - Auth with login: +79939760355
+2024-05-18 18:04:10,407 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:04:10,488 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:04:10,488 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:04:11,255 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:04:11,407 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:04:11,804 - INFO - utils.py - 134 - Аккаунт Ирина Березкина комментирует пост, в котором нужно отметить друзей с id wall-225464110_65
+2024-05-18 18:04:11,827 - ERROR - utils.py - 158 - Ошибка при работе с постом wall-225464110_65:
+'account_id'
+2024-05-18 18:04:11,828 - INFO - utils.py - 162 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-225464110_65----------
+2024-05-18 18:04:11,975 - INFO - dispatcher.py - 172 - Update id=588934271 is handled. Duration 3086 ms by bot id=7090078691
+2024-05-18 18:06:13,933 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 18:06:13,936 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 18:06:13,937 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-18 18:06:34,532 - INFO - dispatcher.py - 527 - Start polling
+2024-05-18 18:06:34,740 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 18:08:02,634 - INFO - dispatcher.py - 172 - Update id=588934272 is handled. Duration 993 ms by bot id=7090078691
+2024-05-18 18:08:04,158 - INFO - vk_api.py - 172 - Auth with login: 89886924592
+2024-05-18 18:08:04,159 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:08:04,265 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:08:04,266 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:08:05,071 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:08:05,170 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:08:05,871 - INFO - utils.py - 134 - Аккаунт q комментирует пост, в котором нужно отметить друзей с id wall-225464110_65
+2024-05-18 18:08:05,899 - ERROR - utils.py - 216 - 'account_id'
+2024-05-18 18:08:07,902 - INFO - utils.py - 141 - аккаунт q репостит запись wall-225464110_65
+2024-05-18 18:08:10,251 - INFO - utils.py - 145 - аккаунт q вступает в группу поста wall-225464110_65
+2024-05-18 18:08:10,293 - INFO - utils.py - 236 - Группа с id -225464110 была пропущена. Аккаунт уже в числе ее участников.
+2024-05-18 18:08:12,300 - INFO - utils.py - 150 - аккаунт q вступает в группы из текста поста []
+2024-05-18 18:09:12,302 - INFO - utils.py - 162 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-225464110_65----------
+2024-05-18 18:09:12,307 - INFO - vk_api.py - 172 - Auth with login: +79939760355
+2024-05-18 18:09:12,307 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:09:12,384 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:09:12,384 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:09:13,228 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:09:13,352 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:09:13,748 - INFO - utils.py - 134 - Аккаунт Ирина Березкина комментирует пост, в котором нужно отметить друзей с id wall-225464110_65
+2024-05-18 18:09:13,870 - ERROR - utils.py - 216 - 'account_id'
+2024-05-18 18:09:15,871 - INFO - utils.py - 141 - аккаунт Ирина Березкина репостит запись wall-225464110_65
+2024-05-18 18:09:18,406 - INFO - utils.py - 145 - аккаунт Ирина Березкина вступает в группу поста wall-225464110_65
+2024-05-18 18:09:18,461 - INFO - utils.py - 236 - Группа с id -225464110 была пропущена. Аккаунт уже в числе ее участников.
+2024-05-18 18:09:20,467 - INFO - utils.py - 150 - аккаунт Ирина Березкина вступает в группы из текста поста []
+2024-05-18 18:10:20,468 - INFO - utils.py - 162 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-225464110_65----------
+2024-05-18 18:10:20,562 - ERROR - dispatcher.py - 219 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2024-05-18 18:10:20,562 - WARNING - dispatcher.py - 221 - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7090078691)
+2024-05-18 18:10:20,882 - INFO - dispatcher.py - 172 - Update id=588934273 is handled. Duration 136902 ms by bot id=7090078691
+2024-05-18 18:10:31,632 - INFO - dispatcher.py - 233 - Connection established (tryings = 1, bot id = 7090078691)
+2024-05-18 18:11:42,778 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 18:11:42,781 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 18:11:42,781 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-18 18:11:47,219 - INFO - dispatcher.py - 527 - Start polling
+2024-05-18 18:11:47,274 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 18:12:17,113 - INFO - vk_api.py - 172 - Auth with login: 89886924592
+2024-05-18 18:12:17,114 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:12:17,191 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:12:17,191 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:12:18,469 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:12:18,578 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:12:18,580 - INFO - vk_api.py - 172 - Auth with login: +79939760355
+2024-05-18 18:12:18,580 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:12:18,686 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:12:18,686 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:12:19,395 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:12:19,493 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:12:19,741 - INFO - dispatcher.py - 172 - Update id=588934274 is handled. Duration 2987 ms by bot id=7090078691
+2024-05-18 18:12:50,508 - INFO - vk_api.py - 172 - Auth with login: 89886924592
+2024-05-18 18:12:50,508 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:12:50,594 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:12:50,594 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:12:51,245 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:12:51,352 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:12:51,353 - INFO - vk_api.py - 172 - Auth with login: +79939760355
+2024-05-18 18:12:51,354 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:12:51,436 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:12:51,436 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:12:52,142 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:12:52,245 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:12:52,457 - INFO - dispatcher.py - 172 - Update id=588934275 is handled. Duration 2244 ms by bot id=7090078691
+2024-05-18 18:12:54,289 - INFO - dispatcher.py - 172 - Update id=588934276 is handled. Duration 874 ms by bot id=7090078691
+2024-05-18 18:12:58,172 - INFO - vk_api.py - 172 - Auth with login: 89886924592
+2024-05-18 18:12:58,173 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:12:58,252 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:12:58,252 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:12:59,041 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:12:59,147 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:12:59,531 - INFO - utils.py - 129 - Аккаунт q пропустил ранее обработанный пост с id wall-225464110_65
+2024-05-18 18:12:59,531 - INFO - utils.py - 162 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-225464110_65----------
+2024-05-18 18:12:59,531 - INFO - vk_api.py - 172 - Auth with login: +79939760355
+2024-05-18 18:12:59,532 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:12:59,592 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:12:59,593 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:13:00,207 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:13:00,298 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:13:00,685 - INFO - utils.py - 129 - Аккаунт Ирина Березкина пропустил ранее обработанный пост с id wall-225464110_65
+2024-05-18 18:13:00,685 - INFO - utils.py - 162 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-225464110_65----------
+2024-05-18 18:13:00,826 - INFO - dispatcher.py - 172 - Update id=588934277 is handled. Duration 2778 ms by bot id=7090078691
+2024-05-18 18:15:13,719 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 18:15:13,722 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 18:15:13,722 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-18 18:15:13,896 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 18:15:19,351 - INFO - dispatcher.py - 527 - Start polling
+2024-05-18 18:15:19,403 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 18:15:23,701 - INFO - dispatcher.py - 172 - Update id=588934278 is handled. Duration 785 ms by bot id=7090078691
+2024-05-18 18:15:24,991 - INFO - vk_api.py - 172 - Auth with login: 89886924592
+2024-05-18 18:15:24,992 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:15:25,078 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:15:25,078 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:15:25,928 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:15:26,005 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:15:26,396 - INFO - utils.py - 134 - Аккаунт q комментирует пост, в котором нужно отметить друзей с id wall-225464110_65
+2024-05-18 18:15:26,418 - ERROR - utils.py - 223 - 'account_id'
+2024-05-18 18:15:28,423 - INFO - utils.py - 141 - аккаунт q репостит запись wall-225464110_65
+2024-05-18 18:15:30,744 - INFO - utils.py - 145 - аккаунт q вступает в группу поста wall-225464110_65
+2024-05-18 18:15:30,825 - INFO - utils.py - 243 - Группа с id -225464110 была пропущена. Аккаунт уже в числе ее участников.
+2024-05-18 18:15:32,828 - INFO - utils.py - 150 - аккаунт q вступает в группы из текста поста []
+2024-05-18 18:16:32,814 - INFO - utils.py - 162 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-225464110_65----------
+2024-05-18 18:16:32,819 - INFO - vk_api.py - 172 - Auth with login: +79939760355
+2024-05-18 18:16:32,819 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:16:32,896 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:16:32,896 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:16:33,624 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:16:33,759 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:16:34,159 - INFO - utils.py - 134 - Аккаунт Ирина Березкина комментирует пост, в котором нужно отметить друзей с id wall-225464110_65
+2024-05-18 18:16:34,196 - ERROR - utils.py - 223 - 'account_id'
+2024-05-18 18:16:36,200 - INFO - utils.py - 141 - аккаунт Ирина Березкина репостит запись wall-225464110_65
+2024-05-18 18:16:38,660 - INFO - utils.py - 145 - аккаунт Ирина Березкина вступает в группу поста wall-225464110_65
+2024-05-18 18:16:38,703 - INFO - utils.py - 243 - Группа с id -225464110 была пропущена. Аккаунт уже в числе ее участников.
+2024-05-18 18:16:40,703 - INFO - utils.py - 150 - аккаунт Ирина Березкина вступает в группы из текста поста []
+2024-05-18 18:17:40,699 - INFO - utils.py - 162 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-225464110_65----------
+2024-05-18 18:17:40,786 - ERROR - dispatcher.py - 219 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2024-05-18 18:17:40,786 - WARNING - dispatcher.py - 221 - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7090078691)
+2024-05-18 18:17:40,786 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 18:17:40,787 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 18:17:40,787 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 18:17:40,787 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 18:17:40,787 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 18:17:40,787 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 18:17:40,787 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 18:17:40,787 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 18:17:40,788 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-18 18:17:40,925 - INFO - dispatcher.py - 172 - Update id=588934279 is not handled. Duration 136265 ms by bot id=7090078691
+2024-05-18 18:17:40,925 - ERROR - dispatcher.py - 315 - Cause exception while process update id=588934279 by bot id=7090078691
+TelegramNetworkError: HTTP Client says - ClientConnectionError: Connector is closed.
+Traceback (most recent call last):
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/client/session/aiohttp.py", line 170, in make_request
+    async with session.post(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiohttp/client.py", line 1194, in __aenter__
+    self._resp = await self._coro
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiohttp/client.py", line 578, in _request
+    conn = await self._connector.connect(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiohttp/connector.py", line 547, in connect
+    raise ClientConnectionError("Connector is closed.")
+aiohttp.client_exceptions.ClientConnectionError: Connector is closed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/handlers/post/post_routes.py", line 56, in repost_posts
+    await message.answer(information, reply_markup=keyboard)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/client/bot.py", line 492, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    raise TelegramNetworkError(method=method, message=f"{type(e).__name__}: {e}")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientConnectionError: Connector is closed.
+2024-05-18 18:19:19,641 - INFO - dispatcher.py - 527 - Start polling
+2024-05-18 18:19:20,941 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 18:19:55,630 - INFO - dispatcher.py - 172 - Update id=588934280 is handled. Duration 246 ms by bot id=7090078691
+2024-05-18 18:19:56,853 - INFO - dispatcher.py - 172 - Update id=588934281 is handled. Duration 92 ms by bot id=7090078691
+2024-05-18 18:19:57,657 - INFO - vk_api.py - 172 - Auth with login: 89886924592
+2024-05-18 18:19:57,657 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:19:57,757 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:19:57,757 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:19:58,533 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:19:58,651 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:19:58,652 - INFO - vk_api.py - 172 - Auth with login: +79939760355
+2024-05-18 18:19:58,652 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:19:58,733 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:19:58,733 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:19:59,538 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:19:59,624 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:19:59,748 - INFO - dispatcher.py - 172 - Update id=588934282 is handled. Duration 2197 ms by bot id=7090078691
+2024-05-18 18:20:01,777 - INFO - vk_api.py - 172 - Auth with login: 89886924592
+2024-05-18 18:20:01,777 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:20:01,895 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:20:01,896 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:20:02,711 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:20:02,821 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:20:02,823 - INFO - vk_api.py - 172 - Auth with login: +79939760355
+2024-05-18 18:20:02,824 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:20:02,911 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:20:02,912 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:20:03,669 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:20:03,785 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:20:03,942 - INFO - dispatcher.py - 172 - Update id=588934283 is handled. Duration 2361 ms by bot id=7090078691
+2024-05-18 18:20:26,955 - INFO - vk_api.py - 172 - Auth with login: 89886924592
+2024-05-18 18:20:26,957 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:20:27,035 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:20:27,036 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:20:27,761 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:20:27,863 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:20:27,865 - INFO - vk_api.py - 172 - Auth with login: +79939760355
+2024-05-18 18:20:27,866 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:20:27,986 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:20:27,986 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:20:28,641 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:20:28,731 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:20:28,873 - INFO - dispatcher.py - 172 - Update id=588934284 is handled. Duration 2240 ms by bot id=7090078691
+2024-05-18 18:20:35,214 - INFO - vk_api.py - 172 - Auth with login: 89886924592
+2024-05-18 18:20:35,214 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:20:35,303 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:20:35,303 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:20:36,032 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:20:36,120 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:20:36,121 - INFO - vk_api.py - 172 - Auth with login: +79939760355
+2024-05-18 18:20:36,122 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:20:36,195 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:20:36,195 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:20:37,047 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:20:37,589 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:20:37,901 - INFO - dispatcher.py - 172 - Update id=588934285 is handled. Duration 2870 ms by bot id=7090078691
+2024-05-18 18:20:39,896 - INFO - dispatcher.py - 172 - Update id=588934286 is handled. Duration 675 ms by bot id=7090078691
+2024-05-18 18:20:44,797 - INFO - vk_api.py - 172 - Auth with login: 89886924592
+2024-05-18 18:20:44,798 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:20:44,939 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:20:44,940 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:20:45,766 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:20:45,990 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:20:46,378 - INFO - utils.py - 134 - Аккаунт q комментирует пост, в котором нужно отметить друзей с id wall-225464110_65
+2024-05-18 18:20:46,407 - ERROR - utils.py - 223 - <class 'Exception'>
+2024-05-18 18:20:48,412 - INFO - utils.py - 141 - аккаунт q репостит запись wall-225464110_65
+2024-05-18 18:20:50,704 - INFO - utils.py - 145 - аккаунт q вступает в группу поста wall-225464110_65
+2024-05-18 18:20:50,761 - INFO - utils.py - 243 - Группа с id -225464110 была пропущена. Аккаунт уже в числе ее участников.
+2024-05-18 18:20:52,768 - INFO - utils.py - 150 - аккаунт q вступает в группы из текста поста []
+2024-05-18 18:21:52,768 - INFO - utils.py - 162 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-225464110_65----------
+2024-05-18 18:21:52,770 - INFO - vk_api.py - 172 - Auth with login: +79939760355
+2024-05-18 18:21:52,770 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:21:52,858 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:21:52,858 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:21:53,630 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:21:53,746 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:21:54,138 - INFO - utils.py - 134 - Аккаунт Ирина Березкина комментирует пост, в котором нужно отметить друзей с id wall-225464110_65
+2024-05-18 18:21:54,156 - ERROR - utils.py - 223 - <class 'Exception'>
+2024-05-18 18:21:56,161 - INFO - utils.py - 141 - аккаунт Ирина Березкина репостит запись wall-225464110_65
+2024-05-18 18:21:58,633 - INFO - utils.py - 145 - аккаунт Ирина Березкина вступает в группу поста wall-225464110_65
+2024-05-18 18:21:58,714 - INFO - utils.py - 243 - Группа с id -225464110 была пропущена. Аккаунт уже в числе ее участников.
+2024-05-18 18:22:00,719 - INFO - utils.py - 150 - аккаунт Ирина Березкина вступает в группы из текста поста []
+2024-05-18 18:23:00,723 - INFO - utils.py - 162 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-225464110_65----------
+2024-05-18 18:23:00,804 - ERROR - dispatcher.py - 219 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2024-05-18 18:23:00,804 - WARNING - dispatcher.py - 221 - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7090078691)
+2024-05-18 18:23:00,804 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 18:23:00,804 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 18:23:00,804 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-18 18:23:00,945 - INFO - dispatcher.py - 172 - Update id=588934287 is not handled. Duration 136328 ms by bot id=7090078691
+2024-05-18 18:23:00,945 - ERROR - dispatcher.py - 315 - Cause exception while process update id=588934287 by bot id=7090078691
+TelegramNetworkError: HTTP Client says - ClientConnectionError: Connector is closed.
+Traceback (most recent call last):
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/client/session/aiohttp.py", line 170, in make_request
+    async with session.post(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiohttp/client.py", line 1194, in __aenter__
+    self._resp = await self._coro
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiohttp/client.py", line 578, in _request
+    conn = await self._connector.connect(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiohttp/connector.py", line 547, in connect
+    raise ClientConnectionError("Connector is closed.")
+aiohttp.client_exceptions.ClientConnectionError: Connector is closed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/handlers/post/post_routes.py", line 56, in repost_posts
+    await message.answer(information, reply_markup=keyboard)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/client/bot.py", line 492, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    raise TelegramNetworkError(method=method, message=f"{type(e).__name__}: {e}")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientConnectionError: Connector is closed.
+2024-05-18 18:23:19,166 - INFO - dispatcher.py - 527 - Start polling
+2024-05-18 18:23:19,262 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 18:24:17,174 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 18:24:17,179 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 18:24:17,179 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-18 18:24:20,734 - INFO - dispatcher.py - 527 - Start polling
+2024-05-18 18:24:20,811 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 18:24:22,915 - INFO - dispatcher.py - 172 - Update id=588934288 is handled. Duration 415 ms by bot id=7090078691
+2024-05-18 18:24:23,751 - INFO - dispatcher.py - 172 - Update id=588934289 is handled. Duration 106 ms by bot id=7090078691
+2024-05-18 18:24:24,872 - INFO - dispatcher.py - 172 - Update id=588934290 is handled. Duration 597 ms by bot id=7090078691
+2024-05-18 18:24:27,422 - INFO - vk_api.py - 172 - Auth with login: 89886924592
+2024-05-18 18:24:27,422 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:24:27,557 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:24:27,557 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:24:28,293 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:24:28,381 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:24:28,771 - INFO - utils.py - 134 - Аккаунт q комментирует пост, в котором нужно отметить друзей с id wall-225464110_65
+2024-05-18 18:24:28,793 - ERROR - utils.py - 225 - 'account_id'
+2024-05-18 18:24:30,798 - INFO - utils.py - 141 - аккаунт q репостит запись wall-225464110_65
+2024-05-18 18:24:33,074 - INFO - utils.py - 145 - аккаунт q вступает в группу поста wall-225464110_65
+2024-05-18 18:24:33,116 - INFO - utils.py - 245 - Группа с id -225464110 была пропущена. Аккаунт уже в числе ее участников.
+2024-05-18 18:24:35,119 - INFO - utils.py - 150 - аккаунт q вступает в группы из текста поста []
+2024-05-18 18:25:35,122 - INFO - utils.py - 162 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-225464110_65----------
+2024-05-18 18:25:35,126 - INFO - vk_api.py - 172 - Auth with login: +79939760355
+2024-05-18 18:25:35,126 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:25:35,195 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:25:35,195 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:25:36,048 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:25:36,171 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:25:36,563 - INFO - utils.py - 134 - Аккаунт Ирина Березкина комментирует пост, в котором нужно отметить друзей с id wall-225464110_65
+2024-05-18 18:25:36,580 - ERROR - utils.py - 225 - 'account_id'
+2024-05-18 18:25:38,585 - INFO - utils.py - 141 - аккаунт Ирина Березкина репостит запись wall-225464110_65
+2024-05-18 18:25:41,019 - INFO - utils.py - 145 - аккаунт Ирина Березкина вступает в группу поста wall-225464110_65
+2024-05-18 18:25:41,078 - INFO - utils.py - 245 - Группа с id -225464110 была пропущена. Аккаунт уже в числе ее участников.
+2024-05-18 18:25:43,083 - INFO - utils.py - 150 - аккаунт Ирина Березкина вступает в группы из текста поста []
+2024-05-18 18:26:43,084 - INFO - utils.py - 162 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-225464110_65----------
+2024-05-18 18:26:43,159 - ERROR - dispatcher.py - 219 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2024-05-18 18:26:43,160 - WARNING - dispatcher.py - 221 - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7090078691)
+2024-05-18 18:26:43,160 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 18:26:43,161 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 18:26:43,161 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 18:26:43,161 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 18:26:43,161 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 18:26:43,161 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 18:26:43,162 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 18:26:43,162 - INFO - dispatcher.py - 554 - Polling stopped
+2024-05-18 18:26:43,292 - INFO - dispatcher.py - 172 - Update id=588934291 is not handled. Duration 135975 ms by bot id=7090078691
+2024-05-18 18:26:43,292 - ERROR - dispatcher.py - 315 - Cause exception while process update id=588934291 by bot id=7090078691
+TelegramNetworkError: HTTP Client says - ClientConnectionError: Connector is closed.
+Traceback (most recent call last):
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/client/session/aiohttp.py", line 170, in make_request
+    async with session.post(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiohttp/client.py", line 1194, in __aenter__
+    self._resp = await self._coro
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiohttp/client.py", line 578, in _request
+    conn = await self._connector.connect(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiohttp/connector.py", line 547, in connect
+    raise ClientConnectionError("Connector is closed.")
+aiohttp.client_exceptions.ClientConnectionError: Connector is closed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/handlers/post/post_routes.py", line 56, in repost_posts
+    await message.answer(information, reply_markup=keyboard)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/client/bot.py", line 492, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    raise TelegramNetworkError(method=method, message=f"{type(e).__name__}: {e}")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientConnectionError: Connector is closed.
+2024-05-18 18:26:54,503 - INFO - dispatcher.py - 527 - Start polling
+2024-05-18 18:26:54,554 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 18:26:56,597 - INFO - dispatcher.py - 172 - Update id=588934293 is handled. Duration 245 ms by bot id=7090078691
+2024-05-18 18:26:58,073 - INFO - dispatcher.py - 172 - Update id=588934294 is handled. Duration 123 ms by bot id=7090078691
+2024-05-18 18:26:59,406 - INFO - dispatcher.py - 172 - Update id=588934295 is handled. Duration 673 ms by bot id=7090078691
+2024-05-18 18:27:00,474 - INFO - vk_api.py - 172 - Auth with login: 89886924592
+2024-05-18 18:27:00,475 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:27:00,554 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:27:00,554 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:27:01,235 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:27:01,324 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:27:01,716 - INFO - utils.py - 134 - Аккаунт q комментирует пост, в котором нужно отметить друзей с id wall-225464110_65
+2024-05-18 18:27:07,643 - INFO - utils.py - 141 - аккаунт q репостит запись wall-225464110_65
+2024-05-18 18:27:09,927 - INFO - utils.py - 145 - аккаунт q вступает в группу поста wall-225464110_65
+2024-05-18 18:27:09,968 - INFO - utils.py - 245 - Группа с id -225464110 была пропущена. Аккаунт уже в числе ее участников.
+2024-05-18 18:27:11,973 - INFO - utils.py - 150 - аккаунт q вступает в группы из текста поста []
+2024-05-18 18:28:11,973 - INFO - utils.py - 162 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-225464110_65----------
+2024-05-18 18:28:11,980 - INFO - vk_api.py - 172 - Auth with login: +79939760355
+2024-05-18 18:28:11,981 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-18 18:28:12,098 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-18 18:28:12,099 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-18 18:28:12,850 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-18 18:28:12,964 - INFO - vk_api.py - 213 - access_token from config is valid
+2024-05-18 18:28:13,369 - INFO - utils.py - 134 - Аккаунт Ирина Березкина комментирует пост, в котором нужно отметить друзей с id wall-225464110_65
+2024-05-18 18:28:19,072 - INFO - utils.py - 141 - аккаунт Ирина Березкина репостит запись wall-225464110_65
+2024-05-18 18:28:21,626 - INFO - utils.py - 145 - аккаунт Ирина Березкина вступает в группу поста wall-225464110_65
+2024-05-18 18:28:21,678 - INFO - utils.py - 245 - Группа с id -225464110 была пропущена. Аккаунт уже в числе ее участников.
+2024-05-18 18:28:23,680 - INFO - utils.py - 150 - аккаунт Ирина Березкина вступает в группы из текста поста []
+2024-05-18 18:29:23,680 - INFO - utils.py - 162 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-225464110_65----------
+2024-05-18 18:29:23,766 - ERROR - dispatcher.py - 219 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2024-05-18 18:29:23,767 - WARNING - dispatcher.py - 221 - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7090078691)
+2024-05-18 18:29:24,234 - INFO - dispatcher.py - 172 - Update id=588934296 is handled. Duration 143874 ms by bot id=7090078691
+2024-05-18 18:29:34,816 - INFO - dispatcher.py - 233 - Connection established (tryings = 1, bot id = 7090078691)
+2024-05-18 18:34:13,066 - ERROR - dispatcher.py - 219 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2024-05-18 18:34:13,068 - WARNING - dispatcher.py - 221 - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7090078691)
+2024-05-18 18:34:24,273 - INFO - dispatcher.py - 233 - Connection established (tryings = 1, bot id = 7090078691)
+2024-05-18 18:36:11,551 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-18 18:36:11,553 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-18 18:36:11,554 - INFO - dispatcher.py - 554 - Polling stopped

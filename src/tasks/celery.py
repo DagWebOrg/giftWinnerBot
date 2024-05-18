@@ -17,8 +17,7 @@ app.conf.update(
 
 @app.on_after_configure.connect
 def setup_periodic_tasks(sender, **kwargs):
-    frequency_of_reposts_in_seconds = 10800.0
-    sender.add_periodic_task(frequency_of_reposts_in_seconds, \
+    sender.add_periodic_task(settings.FREQUENCY_OF_THE_REPOST, \
                               repost.s(), name='Periodic repost')
 
 

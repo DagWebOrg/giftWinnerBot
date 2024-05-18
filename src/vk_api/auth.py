@@ -8,6 +8,7 @@ def auth_handler():
 def auth(login='', password='', token=None):
     if token:
         group = vk_api.VkApi(token=token)
+        print(group)
         return group
     elif login and password:
         try:

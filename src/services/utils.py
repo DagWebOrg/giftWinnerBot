@@ -1,4 +1,5 @@
 import time
+import random
 
 from vk_api import auth
 from vk_api.vk_api.exceptions import ApiError
@@ -6,6 +7,8 @@ from vk_api.vk_api.exceptions import ApiError
 from logger.config import LOGGER
 from database.crud import CRUD
 from .http_requests.api import get_posts_from_api
+
+import settings
 
 
 
@@ -37,8 +40,7 @@ def validate_posts(posts):
         if post_is_validated(post):
             original_post = post['copy_history'][0]
             post_id = f"wall{str(original_post['owner_id'])}_{str(original_post['id'])}"
-            # Не ограничивать количество текста, потому что при репосте будет нужен весь текст!!!!!!!!
-            content = original_post['text'][:100]
+            content = original_post['text']
 
             validated_posts.append({
             'post_id': post_id,
@@ -72,7 +74,7 @@ def post_is_validated(post):
     original_post = post['copy_history'][0]
     
     # Если исходный пост не содержит ключевых слов.
-    if not string_contain(original_post['text'], GIFT_WORDS):
+    if not string_contains_at_least_one_word(original_post['text'], GIFT_WORDS):
         corresponds = False
         return corresponds
 
@@ -84,7 +86,7 @@ def update_scan_date_on_the_tracking_account(account):
     CRUD.create_tracking_account(alias=account['alias'], account_id=account['account_id'])
 
 
-def string_contain(string: str, substrings_list: list):
+def string_contains_at_least_one_word(string: str, substrings_list: list):
     result = False
     for sub_str in substrings_list:
         if (string.lower().find(sub_str.lower()) != -1):
@@ -92,9 +94,27 @@ def string_contain(string: str, substrings_list: list):
             break
     return result
 
+# На вход подаются несколько наборов слов, должно встретиться каждое слово хотя бы из одного набора.
+#   [
+#       ['первое слово', 'второе слово'], - первый набор
+#        ['qwer', 'skldfngdlfgj', '1111'], - второй набор
+#   ]
+def string_contains_every_word(string: str, all_substrings_lists: list[list]):
+    for substrings_list in all_substrings_lists:
+        contain_a_set_of_words = True
+        for sub_str in substrings_list:
+            if (string.lower().find(sub_str.lower()) != -1):
+                continue
+            else:
+                contain_a_set_of_words = False
+        if contain_a_set_of_words:
+            return True
+    return False
 
-def get_auth_session(account):
-    vk_auth = auth.auth(login=account['login'], password=account['password'])
+        
+
+def get_auth_session(login, password):
+    vk_auth = auth.auth(login=login, password=password)
     return vk_auth
 
 def take_part_in_the_draw(vk_auth, account, posts):
@@ -105,12 +125,17 @@ def take_part_in_the_draw(vk_auth, account, posts):
 
             try:
                 # проверка на то, была ли репостнута запись ранее.
-                if post_is_already_reposted(vk_auth, group_id, group_post_id):
+                if post_is_already_liked(vk_auth, group_id, group_post_id):
                     LOGGER.info(f"Аккаунт {account['alias']} пропустил ранее обработанный пост с id {full_post_id}")
                     continue
 
-                LOGGER.info(f"Аккаунт {account['alias']} комментирует пост с id {full_post_id}")
-                write_a_comment_on_the_post(vk_auth, group_id, group_post_id)
+                # Если в посте сказано отметить друга
+                if string_contains_every_word(post['content'], settings.WORDS_DEFINING_THAT_POST_WITH_A_FRIENDS_MARK):
+                    LOGGER.info(f"Аккаунт {account['alias']} комментирует пост, в котором нужно отметить друзей с id {full_post_id}")
+                    write_a_friends_mark_comment_on_the_post(vk_auth, group_id, group_post_id)
+                else:
+                    LOGGER.info(f"Аккаунт {account['alias']} комментирует пост с id {full_post_id}")
+                    write_a_standart_comment_on_the_post(vk_auth, group_id, group_post_id)
 
                 time.sleep(2)
                 LOGGER.info(f"аккаунт {account['alias']} репостит запись {full_post_id}")
@@ -137,20 +162,57 @@ def take_part_in_the_draw(vk_auth, account, posts):
                 LOGGER.info(f'----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-{full_post_id}----------')
 
 
-def post_is_already_reposted(vk_auth, group_id, group_post_id):
-    already_reposted = int(vk_auth.method(method='likes.isLiked', values={
+def post_is_already_liked(vk_auth, group_id, group_post_id):
+    already_liked = int(vk_auth.method(method='likes.isLiked', values={
         'owner_id': group_id,
         'item_id': group_post_id,
         'type': 'post'
     })['copied'])
-    return already_reposted
+    return already_liked
 
-def write_a_comment_on_the_post(vk_auth, group_id, group_post_id, message = 'Участвую'):
-    vk_auth.method(method='wall.createComment', values={
-    'owner_id': group_id,
-    'post_id': group_post_id,
-    'message': message
-    })
+def write_a_standart_comment_on_the_post(vk_auth, group_id, group_post_id, message = 'Участвую'):
+    for comment_list in settings.STANDART_COMMENTS:
+        comment = random.choice(comment_list)
+
+        vk_auth.method(method='wall.createComment', values={
+        'owner_id': group_id,
+        'post_id': group_post_id,
+        'message': comment
+        })
+
+        time.sleep(3)
+
+def write_a_friends_mark_comment_on_the_post(vk_auth, group_id, group_post_id, number_of_marks = 3):
+    work_accounts = CRUD.get_work_accounts()
+
+    my_identificator = vk_auth.__dict__['token']['user_id']
+
+    all_identificators = []
+    selected_identificators = []
+
+    # Достаем все id из бд
+    for account in work_accounts:
+        all_identificators.append(account['account_id'])
+
+    all_identificators.remove(my_identificator)
+    
+    # Выбираем id аккаунтов для репоста
+    if len(all_identificators) < number_of_marks:
+        selected_identificators = random.sample(all_identificators, len(all_identificators))
+    else:
+        selected_identificators = random.sample(all_identificators, number_of_marks)
+
+    for identificator in selected_identificators:
+        vk_auth.method(method='wall.createComment', values={
+        'owner_id': group_id,
+        'post_id': group_post_id,
+        'message': f'@id{identificator}'
+        })
+
+        time.sleep(3)
+
+
+
 
 def repost_post(vk_auth, full_post_id):
     vk_auth.method(method='wall.repost', values={
@@ -185,4 +247,13 @@ def return_all_groups_id_from_text(post_text):
         return communities_id
     else:
         return []
+    
+def get_id_by_login_and_password(login, password):
+    try:
+        vk_auth = get_auth_session(login, password)
+        account_id = vk_auth.__dict__['token']['user_id']
+        return account_id
+    except Exception as e:
+        LOGGER.error(f'Ошибка при записи рабочего аккаунта в бд. Не удалось залогиниться с помощью vk_api. {login} --- \n{e}')
+        return False
 

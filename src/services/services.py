@@ -25,7 +25,7 @@ async def process_posts_with_prize_draws_from_database():
     work_accounts = CRUD.get_work_accounts()
     for account in work_accounts:
         try:
-            vk_auth = get_auth_session(account)
+            vk_auth = get_auth_session(account['login'], account['password'])
         except Exception as e:
             LOGGER.error(f'Ошибка при входе в аккаунт {account["login"]} --- \n{e}')
             continue

@@ -34,7 +34,8 @@ class CRUD():
                 session.expunge_all()
                 work_accounts = [{'alias': item.alias,
                                 'login': item.login,
-                                'password': item.password}
+                                'password': item.password,
+                                'account_id': item.account_id}
                                   for item in work_accounts]
                 return work_accounts
             except Exception as e:
@@ -42,13 +43,14 @@ class CRUD():
 
 
     @staticmethod
-    def create_work_account(alias: str, login: str, password):
+    def create_work_account(alias: str, login: str, password: str, account_id: str):
         with DatabaseManager() as session:
             try:
                 new_work_account = WorkAccount(
                     alias = alias,
                     login = login,
-                    password = password
+                    password = password,
+                    account_id = account_id
                 )
                 session.add(new_work_account)
                 session.commit()

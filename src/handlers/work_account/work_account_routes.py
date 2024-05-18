@@ -7,6 +7,9 @@ from states.work_account import WorkAccountState
 from utils.permissions import is_authenticated
 from utils.keyboards import KeyboardStorage as kb
 from utils.formatters import format_work_accounts_to_alias_list
+from utils.exceptions import AccountAddingError
+
+from services.utils import get_id_by_login_and_password
 
 from database.crud import CRUD
 
@@ -64,6 +67,15 @@ async def work_account_password_entry(message: types.Message, state: FSMContext,
     await state.update_data({'password': password})
 
     data = await state.get_data()
+
+    # логинимся и получаем id аккаунта
+    data['account_id'] = get_id_by_login_and_password(data['login'], data['password'])
+
+    # если id аккаунта не получен - вызываем исключение
+    if not data['account_id']:
+        raise AccountAddingError(message='Ошибка при добавлении аккаунта. Не удалось авторизоваться и получить id по введенным данным.')
+
+    
     CRUD.create_work_account(**data)
 
     keyboard = kb.work_accounts_list()

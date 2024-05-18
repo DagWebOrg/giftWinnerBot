@@ -7,3 +7,5 @@ class AuthError(ValueError):
 class AccountAddingError(ValueError):
     def __init__(self, message = 'Произошла ошибка при добавлении аккаунта.') -> None:
         super().__init__(message)
+
+
