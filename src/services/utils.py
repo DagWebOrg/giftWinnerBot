@@ -187,26 +187,28 @@ def write_a_friends_mark_comment_on_the_post(vk_auth, group_id, group_post_id, n
 
     my_identificator = vk_auth.__dict__['token']['user_id']
 
-    all_identificators = []
-    selected_identificators = []
+    all_work_accounts = []
+    selected_work_accounts = []
 
     # Достаем все id из бд
     for account in work_accounts:
-        all_identificators.append(account['account_id'])
-
-    all_identificators.remove(my_identificator)
+        if my_identificator != account['account_id']:
+            all_work_accounts.append({
+                'account_id': account['account_id'],
+                'alias': account['alias']
+                })
     
     # Выбираем id аккаунтов для репоста
-    if len(all_identificators) < number_of_marks:
-        selected_identificators = random.sample(all_identificators, len(all_identificators))
+    if len(all_work_accounts) < number_of_marks:
+        selected_work_accounts = random.sample(all_work_accounts, len(all_work_accounts))
     else:
-        selected_identificators = random.sample(all_identificators, number_of_marks)
+        selected_work_accounts = random.sample(all_work_accounts, number_of_marks)
 
-    for identificator in selected_identificators:
+    for account in selected_work_accounts:
         vk_auth.method(method='wall.createComment', values={
         'owner_id': group_id,
         'post_id': group_post_id,
-        'message': f'@id{identificator}'
+        'message': f"@id{account['account_id']} ({account['alias']})"
         })
 
         time.sleep(3)
