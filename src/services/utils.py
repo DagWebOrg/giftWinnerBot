@@ -1,4 +1,5 @@
 import time
+import asyncio
 import random
 
 from vk_api import auth
@@ -170,9 +171,10 @@ def post_is_already_liked(vk_auth, group_id, group_post_id):
     })['copied'])
     return already_liked
 
-def write_a_standart_comment_on_the_post(vk_auth, group_id, group_post_id, message = 'Участвую'):
-    for comment_list in settings.STANDART_COMMENTS:
-        comment = random.choice(comment_list)
+def write_a_standart_comment_on_the_post(vk_auth, group_id, group_post_id):
+    comment_pull = random.choice(settings.STANDART_COMMENTS)
+    for comment_row in comment_pull:
+        comment = random.choice(comment_row)
 
         vk_auth.method(method='wall.createComment', values={
         'owner_id': group_id,
@@ -180,7 +182,7 @@ def write_a_standart_comment_on_the_post(vk_auth, group_id, group_post_id, messa
         'message': comment
         })
 
-        time.sleep(3)
+        time.sleep(10)
 
 def write_a_friends_mark_comment_on_the_post(vk_auth, group_id, group_post_id, number_of_marks = 3):
     work_accounts = CRUD.get_work_accounts()

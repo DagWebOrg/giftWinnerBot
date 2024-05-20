@@ -9122,3 +9122,74 @@ Traceback (most recent call last):
   File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
     raise TelegramNetworkError(method=method, message=f"{type(e).__name__}: {e}")
 aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientConnectionError: Connector is closed.
+2024-05-20 21:13:30,303 - INFO - dispatcher.py - 527 - Start polling
+2024-05-20 21:13:30,355 - INFO - dispatcher.py - 341 - Run polling for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-20 21:13:42,414 - INFO - dispatcher.py - 172 - Update id=588934305 is handled. Duration 383 ms by bot id=7090078691
+2024-05-20 21:13:44,923 - INFO - dispatcher.py - 172 - Update id=588934306 is handled. Duration 93 ms by bot id=7090078691
+2024-05-20 21:13:46,871 - INFO - dispatcher.py - 172 - Update id=588934307 is handled. Duration 1123 ms by bot id=7090078691
+2024-05-20 21:13:53,489 - INFO - dispatcher.py - 172 - Update id=588934308 is handled. Duration 119 ms by bot id=7090078691
+2024-05-20 21:13:54,502 - INFO - dispatcher.py - 172 - Update id=588934309 is handled. Duration 157 ms by bot id=7090078691
+2024-05-20 21:13:57,764 - INFO - dispatcher.py - 172 - Update id=588934310 is handled. Duration 77 ms by bot id=7090078691
+2024-05-20 21:13:59,119 - INFO - dispatcher.py - 172 - Update id=588934311 is handled. Duration 105 ms by bot id=7090078691
+2024-05-20 21:14:55,304 - INFO - dispatcher.py - 172 - Update id=588934312 is handled. Duration 287 ms by bot id=7090078691
+2024-05-20 21:14:56,671 - INFO - dispatcher.py - 172 - Update id=588934313 is handled. Duration 124 ms by bot id=7090078691
+2024-05-20 21:14:58,034 - INFO - vk_api.py - 172 - Auth with login: 89886924592
+2024-05-20 21:14:58,035 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-20 21:14:58,439 - INFO - vk_api.py - 444 - remixsid is valid
+2024-05-20 21:14:58,440 - INFO - vk_api.py - 389 - Checking security check request
+2024-05-20 21:14:59,175 - INFO - vk_api.py - 395 - Security check is not required
+2024-05-20 21:14:59,265 - INFO - vk_api.py - 209 - access_token from config is not valid: {'access_token': 'vk1.a.L-uF51LeMc98wk-ydmmL8ZfrhjgSUqkcG3j0xH1Jskwj-gf7mSIPy8C3R8hcTA3jJVbOWVQYfK6sawS3ROiWZa-uWYgrA3p1QQ4lkaaigjAMS4Es2eBdixqJr5KqG2Mw-vcRK7tMtzZ4K4tD5ohD29XWYywa1f2QwS1jTwZLITGh4PyH9DcDgsTFcwpfNdbxVqs_U5nbx8u937U3dfdP7g', 'expires_in': '86400', 'user_id': '857805532'}
+2024-05-20 21:14:59,469 - INFO - vk_api.py - 543 - Got access_token
+2024-05-20 21:14:59,722 - INFO - utils.py - 129 - Аккаунт q пропустил ранее обработанный пост с id wall-86956995_42290
+2024-05-20 21:14:59,723 - INFO - utils.py - 162 - ----------КОНЕЦ-РАБОТЫ-С-ПОСТОМ-wall-86956995_42290----------
+2024-05-20 21:14:59,724 - INFO - vk_api.py - 172 - Auth with login: +79939760355
+2024-05-20 21:14:59,725 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-20 21:15:00,126 - INFO - vk_api.py - 441 - remixsid is not valid
+2024-05-20 21:15:00,127 - INFO - vk_api.py - 202 - remixsid from config is not valid: 1_tm_3pH7Lwh2RYgTHtv91wRQJLzKPPGr0GdSqjXELDXFo7gM18HRhG-0ffS1_jZrL5gdB5voThLg38gJUvJxbeQ
+2024-05-20 21:15:00,127 - INFO - vk_api.py - 242 - Logging in...
+2024-05-20 21:15:00,521 - INFO - vk_api.py - 172 - Auth with login: +79939760355
+2024-05-20 21:15:00,522 - INFO - vk_api.py - 431 - Checking remixsid...
+2024-05-20 21:15:02,073 - ERROR - services.py - 30 - Ошибка при входе в аккаунт +79939760355 --- 
+Exceeded 30 redirects.
+2024-05-20 21:15:02,107 - INFO - dispatcher.py - 172 - Update id=588934314 is not handled. Duration 4264 ms by bot id=7090078691
+2024-05-20 21:15:02,108 - ERROR - dispatcher.py - 315 - Cause exception while process update id=588934314 by bot id=7090078691
+TypeError: object NoneType can't be used in 'await' expression
+Traceback (most recent call last):
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/Users/kamamber/Desktop/giftWinnerBot/venv/lib/python3.9/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/Users/kamamber/Desktop/giftWinnerBot/src/handlers/post/post_routes.py", line 50, in repost_posts
+    await process_posts_with_prize_draws_from_database()
+TypeError: object NoneType can't be used in 'await' expression
+2024-05-20 21:15:55,757 - WARNING - dispatcher.py - 455 - Received SIGINT signal
+2024-05-20 21:15:55,760 - INFO - dispatcher.py - 359 - Polling stopped for bot @testoooooooooooo_bot id=7090078691 - 'Тестовый бот'
+2024-05-20 21:15:55,760 - INFO - dispatcher.py - 554 - Polling stopped

@@ -21,7 +21,7 @@ def setup_periodic_tasks(sender, **kwargs):
                               repost.s(), name='Periodic repost')
 
 
-@app.task
+@app.task(bind=True)
 def repost():
     asyncio.run(add_posts_from_tracking_accounts_to_db())
     return asyncio.run(process_posts_with_prize_draws_from_database())
