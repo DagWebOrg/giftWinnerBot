@@ -213,7 +213,7 @@ def write_a_friends_mark_comment_on_the_post(vk_auth, group_id, group_post_id, n
         'message': f"@id{account['account_id']} ({account['alias']})"
         })
 
-        time.sleep(3)
+        time.sleep(10)
 
 
 
