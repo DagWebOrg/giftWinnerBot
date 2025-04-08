@@ -9,6 +9,9 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent
 sys.path.append(BASE_DIR)
 
+BOT_TOKEN = os.getenv('BOT_TOKEN')
+GPT_API_AUTH_KEY = os.getenv('GPT_API_AUTH_KEY')
+
 # Слова для выборки постов с наблюдаемых аккаунтов. Если хоть одно слово есть - пост подходит.
 GIFT_WORDS = ['конкурс', 'розыгрыш', "дари", "репост", "побед", "билет", "абонемент", 'разыгры']
 

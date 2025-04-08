@@ -24,8 +24,7 @@ class CRUD():
                 session.commit()
             except Exception as e:
                 raise ValueError(f'Ошибка БД при пользователя бота в список разрешенных.\n\n{e}')
-            
-    
+
     @staticmethod
     def get_work_accounts():
         with DatabaseManager() as session:
@@ -41,7 +40,6 @@ class CRUD():
             except Exception as e:
                 raise ValueError(f'Ошибка БД при получении списка аккаунтов.\n\n\n{e}')
 
-
     @staticmethod
     def create_work_account(alias: str, login: str, password: str, account_id: str):
         with DatabaseManager() as session:
@@ -56,8 +54,7 @@ class CRUD():
                 session.commit()
             except Exception as e:
                 raise AccountAddingError(f'Ошибка БД при добавлении нового аккаунта.\nВозможно такой аккаунт уже существует.\n\n{e}')
-            
-    
+
     @staticmethod
     def delete_work_account(alias: str):
         with DatabaseManager() as session:
@@ -79,7 +76,6 @@ class CRUD():
             except Exception as e:
                 raise ValueError(f'Ошибка БД при получении токена. Возможно, он не был добавлен: \n\n\n{e}')
 
-
     @staticmethod
     def update_service_token(token: str):
         with DatabaseManager() as session:
@@ -90,7 +86,6 @@ class CRUD():
                 session.merge(new_service_token)
             except Exception as e:
                 raise AccountAddingError(f'Ошибка при обновлении токена.\n\n{e}')
-            
 
     @staticmethod
     def get_tracking_accounts():
@@ -106,7 +101,6 @@ class CRUD():
             except Exception as e:
                 raise ValueError(f'Ошибка БД при получении списка аккаунтов.\n\n\n{e}')
 
-
     @staticmethod
     def create_tracking_account(account_id: str, alias: str):
         with DatabaseManager() as session:
@@ -119,7 +113,6 @@ class CRUD():
                 session.commit()
             except Exception as e:
                 raise AccountAddingError(f'Ошибка БД при добавлении нового аккаунта.\nВозможно такой аккаунт уже существует.\n\n{e}')
-            
 
     @staticmethod
     def delete_tracking_account(alias: str):
@@ -130,8 +123,7 @@ class CRUD():
                 session.commit()
             except Exception as e:
                 raise ValueError(f'Ошибка БД при удалении аккаунта.\n\n{e}')
-            
-    
+
     @staticmethod
     def create_posts(posts: list):
         with DatabaseManager() as session:
@@ -166,7 +158,6 @@ class CRUD():
             except Exception as e:
                 raise ValueError(f'Ошибка БД при получении списка постов.\n\n\n{e}')
 
-
     @staticmethod
     def delete_post(post_id: str):
         with DatabaseManager() as session:
@@ -177,7 +168,7 @@ class CRUD():
             except Exception as e:
                 raise ValueError(f'Ошибка БД при удалении поста.\n\n{e}')
             
-    
+    @staticmethod
     def delete_all_posts():
         with DatabaseManager() as session:
             try:

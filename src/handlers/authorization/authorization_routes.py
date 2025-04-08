@@ -23,9 +23,6 @@ async def cmd_start(message: types.Message, state: FSMContext):
     await state.set_state(KeyboardState.initial)
     await message.answer("Ты уже авторизован.", reply_markup=keyboard)
 
-    
-    
-     
 
 @router.message(AuthorizationState.password_entry)
 async def authenticate_user(message: types.Message, state: FSMContext, bot: Bot):

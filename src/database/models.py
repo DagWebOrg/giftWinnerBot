@@ -1,10 +1,7 @@
-from typing import Optional
-
 from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.orm import Mapped
 from sqlalchemy.orm import mapped_column
-from sqlalchemy.sql import func
-from sqlalchemy import String, ForeignKey, DateTime, TIMESTAMP
+from sqlalchemy import String, DateTime
 import datetime
 
 from .tools import DatabaseManager 
@@ -22,9 +19,6 @@ class TrackingAccount(Base):
     alias: Mapped[str] = mapped_column(String(100), unique=True)
     last_scan_data: Mapped[datetime.datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.datetime.now(tz=datetime.timezone.utc))
 
-    # def __repr__(self) -> str:
-    #     return f"{self.name}"
-
 
 class WorkAccount(Base):
     __tablename__ = "work_account"
@@ -37,9 +31,6 @@ class WorkAccount(Base):
     password: Mapped[str] = mapped_column(String(100))
     account_id: Mapped[str] = mapped_column(String(100), nullable=False)
 
-    # def __repr__(self) -> str:
-    #     return f"{self.alias}"
-
 
 class ServiceToken(Base):
     __tablename__ = "service_token"
@@ -49,17 +40,12 @@ class ServiceToken(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     token: Mapped[str] = mapped_column(String(500), unique=True)
 
-    # def __repr__(self) -> str:
-    #     return f"{self.alias}"
 
 class BotUser(Base):
     __tablename__ = "bot_user"
     __table_args__ = {'extend_existing': True}
 
     id: Mapped[int] = mapped_column(primary_key=True)
-
-    # def __repr__(self) -> str:
-    #     return f"{self.id}"
 
 
 class GiftPost(Base):

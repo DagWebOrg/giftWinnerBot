@@ -5,6 +5,8 @@ from aiogram.types import ErrorEvent, Message, ReplyKeyboardRemove
 from aiogram.filters import ExceptionTypeFilter
 from aiogram.fsm.context import FSMContext
 
+from settings import BOT_TOKEN
+
 from utils.exceptions import AuthError, AccountAddingError
 from states.authorization import AuthorizationState
 from states.keyboard import KeyboardState
@@ -20,7 +22,7 @@ from handlers.other import other_routes
 from handlers.service_token import service_token_routes
 
 
-token = os.getenv('BOT_TOKEN')
+token = BOT_TOKEN
 bot = Bot(token=token)
 dp = Dispatcher()
 
