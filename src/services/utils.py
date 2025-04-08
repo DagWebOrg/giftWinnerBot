@@ -1,7 +1,8 @@
 import time
-import asyncio
+import re, json
 import random
 
+import demjson3
 from vk_api import auth
 from vk_api.vk_api.exceptions import ApiError
 
@@ -10,8 +11,6 @@ from database.crud import CRUD
 from .http_requests.api import get_posts_from_api
 
 import settings
-
-
 
 
 async def get_new_posts_from_tracked_accounts(posts_count):
@@ -62,9 +61,6 @@ def filter_new_posts(posts, last_scan_data):
 
 
 def post_is_validated(post):
-    from settings import GIFT_WORDS
-
-
     corresponds = True
 
     # Если пост не репостнут с другого аккаунта.
@@ -75,7 +71,7 @@ def post_is_validated(post):
     original_post = post['copy_history'][0]
     
     # Если исходный пост не содержит ключевых слов.
-    if not string_contains_at_least_one_word(original_post['text'], GIFT_WORDS):
+    if not string_contains_at_least_one_word(original_post['text'], settings.GIFT_WORDS):
         corresponds = False
         return corresponds
 
@@ -94,6 +90,7 @@ def string_contains_at_least_one_word(string: str, substrings_list: list):
             result = True
             break
     return result
+
 
 # На вход подаются несколько наборов слов, должно встретиться каждое слово хотя бы из одного набора.
 #   [
@@ -117,6 +114,7 @@ def string_contains_every_word(string: str, all_substrings_lists: list[list]):
 def get_auth_session(login, password):
     vk_auth = auth.auth(login=login, password=password)
     return vk_auth
+
 
 def take_part_in_the_draw(vk_auth, account, posts):
         for post in posts:
@@ -171,6 +169,7 @@ def post_is_already_liked(vk_auth, group_id, group_post_id):
     })['copied'])
     return already_liked
 
+
 def write_a_standart_comment_on_the_post(vk_auth, group_id, group_post_id):
     comment_pull = random.choice(settings.STANDART_COMMENTS)
     for comment_row in comment_pull:
@@ -183,6 +182,7 @@ def write_a_standart_comment_on_the_post(vk_auth, group_id, group_post_id):
         })
 
         time.sleep(10)
+
 
 def write_a_friends_mark_comment_on_the_post(vk_auth, group_id, group_post_id, number_of_marks = 3):
     work_accounts = CRUD.get_work_accounts()
@@ -216,12 +216,11 @@ def write_a_friends_mark_comment_on_the_post(vk_auth, group_id, group_post_id, n
         time.sleep(10)
 
 
-
-
 def repost_post(vk_auth, full_post_id):
     vk_auth.method(method='wall.repost', values={
     'object': full_post_id,
     })
+
 
 def join_to_groups(vk_auth, group_id_list: list):
     for group_id in group_id_list:
@@ -237,7 +236,6 @@ def join_to_groups(vk_auth, group_id_list: list):
                 continue
             raise ApiError
 
-
     
 def return_all_groups_id_from_text(post_text):
     import re
@@ -251,7 +249,8 @@ def return_all_groups_id_from_text(post_text):
         return communities_id
     else:
         return []
-    
+
+
 def get_id_by_login_and_password(login, password):
     try:
         vk_auth = get_auth_session(login, password)
@@ -261,3 +260,32 @@ def get_id_by_login_and_password(login, password):
         LOGGER.error(f'Ошибка при записи рабочего аккаунта в бд. Не удалось залогиниться с помощью vk_api. {login} --- \n{e}')
         return False
 
+
+def clean_json_string_demjson(dirty_json: str) -> dict:
+    return demjson3.decode(dirty_json)
+
+
+def clean_json_string(dirty_json: str) -> dict:
+    # Удаляем все переносы строк и табы (если они не экранированы)
+    dirty_json = dirty_json.replace('\n', '').replace('\r', '').replace('\t', '')
+
+    # Удаляем обратные кавычки и странные символы в начале и конце
+    dirty_json = dirty_json.strip().lstrip("`'").rstrip("`'")
+
+    # Удаляем лишние пробелы
+    dirty_json = re.sub(r'\s+', ' ', dirty_json)
+
+    # Экранируем внутренние кавычки в строках значений (например: МГТУ "Станкин")
+    def fix_quotes(match):
+        key, val = match.group(1), match.group(2)
+        val = val.replace('"', r'\"')  # экранируем двойные кавычки внутри строки
+        return f'"{key}": "{val}"'
+
+    # Попытка привести к формату "key": "value"
+    dirty_json = re.sub(r'"([^"]+)"\s*:\s*"([^"]+)"', fix_quotes, dirty_json)
+
+    # Финальная попытка распарсить
+    try:
+        return json.loads(dirty_json)
+    except json.JSONDecodeError as e:
+        raise ValueError(f'Ошибка при разборе JSON: {e}\nСтрока после очистки:\n{dirty_json}')

@@ -1,19 +1,18 @@
-import json
-import asyncio
-from datetime import datetime
-
-from vk_api import auth
 from database.crud import CRUD
 from logger.config import LOGGER
 
-from .utils import get_new_posts_from_tracked_accounts, validate_posts, get_auth_session, take_part_in_the_draw
-
+from .utils import get_new_posts_from_tracked_accounts, validate_posts, get_auth_session, take_part_in_the_draw, \
+    clean_json_string_demjson
+from ai.api import gpt
 
 async def add_posts_from_tracking_accounts_to_db():
     from settings import NUMBER_OF_SCANNED_POST_FROM_ACCOUNT as posts_count
 
     posts = await get_new_posts_from_tracked_accounts(posts_count)
     validated_posts = validate_posts(posts)
+
+    for post in validated_posts:
+        post['payload'] = clean_json_string_demjson(gpt.chat(post['content']))
 
     CRUD.create_posts(validated_posts)
     print(validated_posts)

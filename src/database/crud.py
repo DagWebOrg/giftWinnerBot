@@ -138,7 +138,8 @@ class CRUD():
                         # Вставка новой записи.
                         new_post = GiftPost(
                             post_id=post['post_id'],
-                            content=post['content']
+                            content=post['content'],
+                            payload=post['payload'],
                         )
                         session.add(new_post)
                 session.commit()

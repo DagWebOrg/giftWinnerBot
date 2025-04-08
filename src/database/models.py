@@ -1,7 +1,7 @@
 from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.orm import Mapped
 from sqlalchemy.orm import mapped_column
-from sqlalchemy import String, DateTime
+from sqlalchemy import String, DateTime, JSON
 import datetime
 
 from .tools import DatabaseManager 
@@ -54,6 +54,8 @@ class GiftPost(Base):
 
     post_id: Mapped[str] = mapped_column(primary_key=True)
     content: Mapped[str] = mapped_column(String(), nullable=True)
+    payload: Mapped[dict] = mapped_column(JSON(), nullable=True)
+
 
     
 def apply_models():
